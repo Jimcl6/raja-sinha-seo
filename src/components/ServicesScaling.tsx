@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { TrendingUp, Users } from 'lucide-react';
+import { TrendingUp, Users, Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ServicesScaling = () => {

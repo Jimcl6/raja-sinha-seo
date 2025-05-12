@@ -90,7 +90,7 @@ const ClientHelp = () => {
                   src="/lovable-uploads/2ae0e69e-ecbe-4f74-aedd-6a44808a3664.png" 
                   alt="Person looking at city view" 
                   className="w-full h-full object-cover object-center-bottom"
-                  style={{ objectPosition: '70% 50%' }}
+                  style={{ objectPosition: '85% 50%' }}
                 />
               </div>
               <CardTitle className="text-xl">"I'm Doing Okay — But Not Growing"</CardTitle>

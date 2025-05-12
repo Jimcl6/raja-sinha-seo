@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Credentials from '@/components/Credentials';
 import ClientHelp from '@/components/ClientHelp';
+import ThreeHourService from '@/components/ThreeHourService';
 import WhyMe from '@/components/WhyMe';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <Credentials />
         <ClientHelp />
+        <ThreeHourService />
         <WhyMe />
         <ContactCTA />
       </main>

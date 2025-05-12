@@ -38,7 +38,7 @@ const Credentials = () => {
               <Globe2 className="h-6 w-6" />
             </div>
             <h3 className="font-bold text-lg mb-2">Global Experience</h3>
-            <p className="text-gray-600">Worked with clients across US and Western markets</p>
+            <p className="text-gray-600">Worked with client in the US | UK | AUS | SE ASIAN Markets</p>
           </div>
           
           {/* Credential 4 */}
@@ -47,7 +47,7 @@ const Credentials = () => {
               <TrendingUp className="h-6 w-6" />
             </div>
             <h3 className="font-bold text-lg mb-2">Proven Results</h3>
-            <p className="text-gray-600">Helped 100+ clients achieve measurable SEO growth</p>
+            <p className="text-gray-600">Helped rank 100s of web-pages to achieve measurable SEO growth.</p>
           </div>
         </div>
       </div>

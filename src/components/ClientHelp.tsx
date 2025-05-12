@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Clock, BarChart2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -22,7 +21,7 @@ const ClientHelp = () => {
           {/* Client Type 1 */}
           <Card className="border-l-4 border-l-amber-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-12 w-12 overflow-hidden rounded-full mb-4 flex items-center justify-center">
+              <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
                 <img 
                   src="/lovable-uploads/ab917ca6-9ea5-4dfe-a98e-d1a011a2e0d7.png" 
                   alt="Person looking at whiteboard" 
@@ -54,8 +53,12 @@ const ClientHelp = () => {
           {/* Client Type 2 */}
           <Card className="border-l-4 border-l-red-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-12 w-12 bg-red-100 text-red-700 rounded-full flex items-center justify-center mb-4">
-                <Clock className="h-6 w-6" />
+              <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
+                <img 
+                  src="/lovable-uploads/fe13677c-0be4-4f97-ae0d-247950c900cf.png" 
+                  alt="Person writing on paper" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardTitle className="text-xl">"I Tried SEO But Gave Up"</CardTitle>
               <CardDescription>You invested in SEO, didn't see results, and moved on.</CardDescription>
@@ -82,8 +85,12 @@ const ClientHelp = () => {
           {/* Client Type 3 */}
           <Card className="border-l-4 border-l-green-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-12 w-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center mb-4">
-                <BarChart2 className="h-6 w-6" />
+              <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
+                <img 
+                  src="/lovable-uploads/2ae0e69e-ecbe-4f74-aedd-6a44808a3664.png" 
+                  alt="Person looking at city view" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardTitle className="text-xl">"I'm Doing Okay — But Not Growing"</CardTitle>
               <CardDescription>You're ranking for a few keywords and getting some traffic — but it's not moving the needle.</CardDescription>

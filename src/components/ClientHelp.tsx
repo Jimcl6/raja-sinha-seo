@@ -13,8 +13,8 @@ const ClientHelp = () => {
             Who I Help — No Matter Where You're Starting From
           </h2>
           <p className="text-lg text-gray-600">
-            Over the years, I've worked with clients at every stage of their SEO journey. Whether you're skeptical, 
-            stuck, or just settling — I meet you where you are and show you what's really possible.
+            Not sure it works? Gave up on it? Just cruising?<br>
+            I’ll meet you there—and help you see what your site could really do.
           </p>
         </div>
         

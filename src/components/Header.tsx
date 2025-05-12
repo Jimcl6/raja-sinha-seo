@@ -11,22 +11,24 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/b88e72ed-5153-4819-92f4-28d7841c73a1.png" 
+                src="/lovable-uploads/57b027fb-50e3-4ee9-a558-f9ee7d926667.png" 
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-8 md:h-10 lg:h-12" 
               />
             </Link>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/services" className="text-gray-600 hover:text-yellow-500 transition-colors">Services</Link>
-            <Link to="/about" className="text-gray-600 hover:text-yellow-500 transition-colors">About</Link>
-            <Link to="/#contact" className="text-gray-600 hover:text-yellow-500 transition-colors">Contact</Link>
-          </nav>
-          
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
-            Book a Call
-          </Button>
+          <div className="flex items-center space-x-4">
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link to="/services" className="text-gray-600 hover:text-yellow-500 transition-colors">Services</Link>
+              <Link to="/about" className="text-gray-600 hover:text-yellow-500 transition-colors">About</Link>
+              <Link to="/#contact" className="text-gray-600 hover:text-yellow-500 transition-colors">Contact</Link>
+            </nav>
+            
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
+              Book a Call
+            </Button>
+          </div>
         </div>
       </div>
     </header>

@@ -63,8 +63,9 @@ const ThreeHourService = () => {
                 alt="Code on computer screen" 
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="text-center p-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/30 to-yellow-600/40 mix-blend-overlay"></div>
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div className="text-center p-8 bg-black/30 rounded-xl backdrop-blur-sm">
                   <div className="text-6xl font-bold text-yellow-400">3</div>
                   <div className="text-2xl font-semibold text-white">Hours</div>
                   <div className="mt-4 text-lg text-gray-100">

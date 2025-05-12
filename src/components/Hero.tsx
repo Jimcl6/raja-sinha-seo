@@ -35,10 +35,11 @@ const Hero = () => {
           
           <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center lg:justify-end">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-yellow-100 shadow-xl">
-              {/* Replace with your actual image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center text-white font-bold text-xl">
-                Your Photo Here
-              </div>
+              <img 
+                src="/lovable-uploads/7806e948-dad2-4255-b973-64a352c4a0df.png" 
+                alt="Raja Sinha" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>

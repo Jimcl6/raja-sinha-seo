@@ -13,7 +13,7 @@ const ClientHelp = () => {
             Who I Help — No Matter Where You're Starting From
           </h2>
           <p className="text-lg text-gray-600">
-            Not sure it works? Gave up on it? Just cruising?
+            Not sure it works? Gave up on it? Just cruising?<br></br>
             I’ll meet you there—and help you see what your site could really do.
           </p>
         </div>

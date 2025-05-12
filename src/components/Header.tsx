@@ -1,9 +1,17 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  
+  const isActive = (path: string) => {
+    if (path === '/#contact' && location.hash === '#contact') return true;
+    return currentPath === path;
+  };
+
   return (
     <header className="bg-white py-4 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -20,9 +28,24 @@ const Header = () => {
           
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex items-center space-x-8">
-              <Link to="/services" className="text-gray-600 hover:text-yellow-500 transition-colors">Services</Link>
-              <Link to="/about" className="text-gray-600 hover:text-yellow-500 transition-colors">About</Link>
-              <Link to="/#contact" className="text-gray-600 hover:text-yellow-500 transition-colors">Contact</Link>
+              <Link 
+                to="/services" 
+                className={`transition-colors ${isActive('/services') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/about" 
+                className={`transition-colors ${isActive('/about') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+              >
+                About
+              </Link>
+              <Link 
+                to="/#contact" 
+                className={`transition-colors ${isActive('/#contact') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+              >
+                Contact
+              </Link>
             </nav>
             
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">

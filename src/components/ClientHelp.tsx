@@ -57,7 +57,7 @@ const ClientHelp = () => {
                 <img 
                   src="/lovable-uploads/fe13677c-0be4-4f97-ae0d-247950c900cf.png" 
                   alt="Person writing on paper" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardTitle className="text-xl">"I Tried SEO But Gave Up"</CardTitle>
@@ -90,7 +90,7 @@ const ClientHelp = () => {
                   src="/lovable-uploads/2ae0e69e-ecbe-4f74-aedd-6a44808a3664.png" 
                   alt="Person looking at city view" 
                   className="w-full h-full object-cover object-center-bottom"
-                  style={{ objectPosition: '50% 85%' }}
+                  style={{ objectPosition: '70% 50%' }}
                 />
               </div>
               <CardTitle className="text-xl">"I'm Doing Okay — But Not Growing"</CardTitle>

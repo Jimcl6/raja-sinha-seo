@@ -21,7 +21,6 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto lg:mx-0 slide-up">
               No Guesswork, Only Results!
             </p>
-            <br>
             <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto lg:mx-0 slide-up">
               15+ years of experience.
             </p>

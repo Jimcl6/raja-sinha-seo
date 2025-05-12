@@ -21,11 +21,11 @@ const ClientHelp = () => {
           {/* Client Type 1 */}
           <Card className="border-l-4 border-l-amber-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
+              <div className="h-60 w-full mb-4 overflow-hidden rounded-md">
                 <img 
                   src="/lovable-uploads/ab917ca6-9ea5-4dfe-a98e-d1a011a2e0d7.png" 
                   alt="Person looking at whiteboard" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <CardTitle className="text-xl">"I Don't Believe in SEO"</CardTitle>
@@ -53,11 +53,11 @@ const ClientHelp = () => {
           {/* Client Type 2 */}
           <Card className="border-l-4 border-l-red-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
+              <div className="h-60 w-full mb-4 overflow-hidden rounded-md">
                 <img 
                   src="/lovable-uploads/fe13677c-0be4-4f97-ae0d-247950c900cf.png" 
                   alt="Person writing on paper" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <CardTitle className="text-xl">"I Tried SEO But Gave Up"</CardTitle>
@@ -85,11 +85,12 @@ const ClientHelp = () => {
           {/* Client Type 3 */}
           <Card className="border-l-4 border-l-green-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-40 w-full mb-4 overflow-hidden rounded-md">
+              <div className="h-60 w-full mb-4 overflow-hidden rounded-md">
                 <img 
                   src="/lovable-uploads/2ae0e69e-ecbe-4f74-aedd-6a44808a3664.png" 
                   alt="Person looking at city view" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center-bottom"
+                  style={{ objectPosition: '50% 85%' }}
                 />
               </div>
               <CardTitle className="text-xl">"I'm Doing Okay — But Not Growing"</CardTitle>

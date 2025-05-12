@@ -9,17 +9,18 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="font-montserrat font-bold text-xl md:text-2xl text-yellow-500">
-              Raja Sinha
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/533a35a0-e5db-4b41-82f9-ecea43483e5c.png" 
+                alt="Raja Sinha SEO Consultancy" 
+                className="h-8 md:h-10 lg:h-12" 
+              />
             </Link>
-            <span className="ml-2 text-gray-500 hidden md:inline-block">SEO Consultancy</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/services" className="text-gray-600 hover:text-yellow-500 transition-colors">Services</Link>
             <Link to="/about" className="text-gray-600 hover:text-yellow-500 transition-colors">About</Link>
-            <Link to="/#approach" className="text-gray-600 hover:text-yellow-500 transition-colors">Approach</Link>
-            <Link to="/diagnosis-room" className="text-gray-600 hover:text-yellow-500 transition-colors">The Diagnosis Room</Link>
             <Link to="/#contact" className="text-gray-600 hover:text-yellow-500 transition-colors">Contact</Link>
           </nav>
           

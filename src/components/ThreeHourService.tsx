@@ -57,15 +57,19 @@ const ThreeHourService = () => {
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-yellow-100 to-yellow-300 rounded-xl shadow-lg flex items-center justify-center">
-              <div className="absolute inset-0 opacity-20">
-                <div className="h-full w-full bg-[radial-gradient(#000 1px,transparent 1px)] [background-size:20px_20px]"></div>
-              </div>
-              <div className="text-center p-8">
-                <div className="text-6xl font-bold text-yellow-600">3</div>
-                <div className="text-2xl font-semibold text-gray-800">Hours</div>
-                <div className="mt-4 text-lg text-gray-700">
-                  Quick diagnosis.<br />Lasting impact.
+            <div className="relative w-full max-w-md aspect-square rounded-xl shadow-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/6b14efb6-e2b1-4330-b1a9-817cc7ee9a5b.png" 
+                alt="Code on computer screen" 
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="text-6xl font-bold text-yellow-400">3</div>
+                  <div className="text-2xl font-semibold text-white">Hours</div>
+                  <div className="mt-4 text-lg text-gray-100">
+                    Quick diagnosis.<br />Lasting impact.
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HelpCircle, Clock, BarChart2 } from 'lucide-react';
+import { Clock, BarChart2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -13,8 +13,8 @@ const ClientHelp = () => {
             Who I Help — No Matter Where You're Starting From
           </h2>
           <p className="text-lg text-gray-600">
-            Not sure it works? Gave up on it? Just cruising?<br></br>
-            I’ll meet you there—and help you see what your site could really do.
+            Not sure it works? Gave up on it? Just cruising?<br />
+            I'll meet you there—and help you see what your site could really do.
           </p>
         </div>
         
@@ -22,8 +22,12 @@ const ClientHelp = () => {
           {/* Client Type 1 */}
           <Card className="border-l-4 border-l-amber-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
-              <div className="h-12 w-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mb-4">
-                <HelpCircle className="h-6 w-6" />
+              <div className="h-12 w-12 overflow-hidden rounded-full mb-4 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/ab917ca6-9ea5-4dfe-a98e-d1a011a2e0d7.png" 
+                  alt="Person looking at whiteboard" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardTitle className="text-xl">"I Don't Believe in SEO"</CardTitle>
               <CardDescription>You've heard SEO takes forever, or maybe you've been burned by empty promises.</CardDescription>

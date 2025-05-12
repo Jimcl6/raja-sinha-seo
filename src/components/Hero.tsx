@@ -14,12 +14,16 @@ const Hero = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center">
           <div className="w-full lg:w-1/2 lg:pr-12 space-y-6 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight fade-in">
-              <span className="block">SEO That</span>
-              <span className="gradient-text">Thinks Ahead</span>
+              <span className="block">SEO using a</span>
+              <span className="gradient-text">Business Owner's Mindset.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto lg:mx-0 slide-up">
-              I help businesses rank faster and smarter by combining 15+ years of SEO expertise with a business owner's mindset. No guesswork, just results.
+              No Guesswork, Only Results!
+            </p>
+            <br>
+            <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl mx-auto lg:mx-0 slide-up">
+              15+ years of experience.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">

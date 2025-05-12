@@ -114,30 +114,6 @@ const ClientHelp = () => {
             </CardContent>
           </Card>
         </div>
-        
-        <div className="mt-14 bg-yellow-50 rounded-lg p-8 shadow-inner max-w-4xl mx-auto">
-          <h3 className="text-xl font-semibold mb-4 text-center">My Approach</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
-              <h4 className="font-medium text-yellow-700 mb-2">Data-first</h4>
-              <p className="text-gray-600">I use audits, analytics, and market research to guide every recommendation.</p>
-            </div>
-            <div>
-              <h4 className="font-medium text-yellow-700 mb-2">Plain language</h4>
-              <p className="text-gray-600">I simplify the strategy so you understand what we're doing and why.</p>
-            </div>
-            <div>
-              <h4 className="font-medium text-yellow-700 mb-2">Result-focused</h4>
-              <p className="text-gray-600">You'll know exactly what results to expect — and when.</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
-              Let's Talk About Your SEO
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );

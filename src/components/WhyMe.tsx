@@ -23,7 +23,7 @@ const WhyMe = () => {
           {/* Differentiator 1 */}
           <div className="flex gap-4">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+              <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <Target className="h-6 w-6" />
               </div>
             </div>
@@ -37,7 +37,7 @@ const WhyMe = () => {
           {/* Differentiator 2 */}
           <div className="flex gap-4">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+              <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <Users className="h-6 w-6" />
               </div>
             </div>
@@ -51,7 +51,7 @@ const WhyMe = () => {
           {/* Differentiator 3 */}
           <div className="flex gap-4">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+              <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <Search className="h-6 w-6" />
               </div>
             </div>
@@ -65,7 +65,7 @@ const WhyMe = () => {
           {/* Differentiator 4 */}
           <div className="flex gap-4">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+              <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <PieChart className="h-6 w-6" />
               </div>
             </div>
@@ -83,7 +83,7 @@ const WhyMe = () => {
               If you're done with vague SEO talk and want someone who's helped over 100 clients grow real traffic — 
               let's talk. I'll show you what's possible for your business and how we can get there.
             </p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-6 text-lg">
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-6 text-lg">
               Schedule Your Free Strategy Call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

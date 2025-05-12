@@ -14,13 +14,13 @@ const Footer = () => {
               Providing strategic SEO services with a business-owner mindset for over 15 years.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -31,31 +31,31 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>Services</span>
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>About Me</span>
                 </a>
               </li>
               <li>
-                <a href="#approach" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a href="#approach" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>My Approach</span>
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a href="#testimonials" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>Testimonials</span>
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>Contact</span>
                 </a>
@@ -69,7 +69,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Have questions or want to discuss your SEO needs? Reach out directly:
             </p>
-            <a href="mailto:raja@example.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+            <a href="mailto:raja@example.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
               raja@example.com
             </a>
             <p className="text-gray-400 mt-4">
@@ -82,7 +82,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800 text-gray-500 text-sm text-center">
           <p>&copy; {new Date().getFullYear()} Raja Sinha SEO Consultancy. All rights reserved.</p>
           <p className="mt-2">
-            <span className="text-blue-500">SEO That Thinks Ahead</span>
+            <span className="text-yellow-500">SEO That Thinks Ahead</span>
           </p>
         </div>
       </div>

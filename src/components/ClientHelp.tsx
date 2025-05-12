@@ -29,18 +29,18 @@ const ClientHelp = () => {
               <CardDescription>You've heard SEO takes forever, or maybe you've been burned by empty promises.</CardDescription>
             </CardHeader>
             <CardContent>
-              <h4 className="font-semibold text-blue-700 mb-3">How I Help:</h4>
+              <h4 className="font-semibold text-yellow-600 mb-3">How I Help:</h4>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I break down exactly how SEO works in your industry using real data.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I'll show you what your competitors are doing — and what you're missing.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>You'll understand what SEO can (and can't) do — with realistic expectations.</span>
                 </li>
               </ul>
@@ -57,18 +57,18 @@ const ClientHelp = () => {
               <CardDescription>You invested in SEO, didn't see results, and moved on.</CardDescription>
             </CardHeader>
             <CardContent>
-              <h4 className="font-semibold text-blue-700 mb-3">How I Help:</h4>
+              <h4 className="font-semibold text-yellow-600 mb-3">How I Help:</h4>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I audit what was done and where it went wrong.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I explain everything in plain English — not technical jargon.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I give you a clear, simple plan to fix it — and show you the results you should have gotten.</span>
                 </li>
               </ul>
@@ -85,18 +85,18 @@ const ClientHelp = () => {
               <CardDescription>You're ranking for a few keywords and getting some traffic — but it's not moving the needle.</CardDescription>
             </CardHeader>
             <CardContent>
-              <h4 className="font-semibold text-blue-700 mb-3">How I Help:</h4>
+              <h4 className="font-semibold text-yellow-600 mb-3">How I Help:</h4>
               <ul className="space-y-2">
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I benchmark your current SEO against top performers in your space.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I reveal hidden opportunities for growth (technical, content, or backlinks).</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="h-5 w-5 text-blue-600 mr-2">•</span>
+                  <span className="h-5 w-5 text-yellow-500 mr-2">•</span>
                   <span>I map out what it will take to move from "okay" to dominating your niche.</span>
                 </li>
               </ul>
@@ -104,25 +104,25 @@ const ClientHelp = () => {
           </Card>
         </div>
         
-        <div className="mt-14 bg-blue-50 rounded-lg p-8 shadow-inner max-w-4xl mx-auto">
+        <div className="mt-14 bg-yellow-50 rounded-lg p-8 shadow-inner max-w-4xl mx-auto">
           <h3 className="text-xl font-semibold mb-4 text-center">My Approach</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="font-medium text-blue-800 mb-2">Data-first</h4>
+              <h4 className="font-medium text-yellow-700 mb-2">Data-first</h4>
               <p className="text-gray-600">I use audits, analytics, and market research to guide every recommendation.</p>
             </div>
             <div>
-              <h4 className="font-medium text-blue-800 mb-2">Plain language</h4>
+              <h4 className="font-medium text-yellow-700 mb-2">Plain language</h4>
               <p className="text-gray-600">I simplify the strategy so you understand what we're doing and why.</p>
             </div>
             <div>
-              <h4 className="font-medium text-blue-800 mb-2">Result-focused</h4>
+              <h4 className="font-medium text-yellow-700 mb-2">Result-focused</h4>
               <p className="text-gray-600">You'll know exactly what results to expect — and when.</p>
             </div>
           </div>
           
           <div className="text-center mt-8">
-            <Button className="bg-blue-700 hover:bg-blue-800 text-white">
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
               Let's Talk About Your SEO
             </Button>
           </div>

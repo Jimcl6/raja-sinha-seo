@@ -5,8 +5,18 @@ import { Button } from '@/components/ui/button';
 
 const WhyMe = () => {
   return (
-    <div className="py-16 md:py-24 bg-slate-50">
-      <div className="container mx-auto px-4">
+    <div className="py-16 md:py-24 relative">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/1518e885-7368-46eb-b2a1-632023b3df5e.png" 
+          alt="Laptop on desk" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-white/90"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Work With Me?</h2>
           <p className="text-xl text-gray-700 mb-4">
@@ -21,7 +31,7 @@ const WhyMe = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 max-w-5xl mx-auto">
           {/* Differentiator 1 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <Target className="h-6 w-6" />
@@ -35,7 +45,7 @@ const WhyMe = () => {
           </div>
           
           {/* Differentiator 2 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <Users className="h-6 w-6" />
@@ -49,7 +59,7 @@ const WhyMe = () => {
           </div>
           
           {/* Differentiator 3 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <Search className="h-6 w-6" />
@@ -63,7 +73,7 @@ const WhyMe = () => {
           </div>
           
           {/* Differentiator 4 */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
                 <PieChart className="h-6 w-6" />

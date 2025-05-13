@@ -44,10 +44,10 @@ const ThreeHourService = () => {
             <Card className="border-yellow-100 bg-white">
               <CardContent className="pt-6">
                 <p className="text-lg font-medium">
-                  And if you need help implementing the changes?
+                  If you need help implementing changes.
                 </p>
                 <p className="text-yellow-600 font-semibold mt-2 mb-4">
-                  My team and I are ready to take you further.
+                  I can take you further.
                 </p>
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
                   Book Your 3-Hour Diagnosis

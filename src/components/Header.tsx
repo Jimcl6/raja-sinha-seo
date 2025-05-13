@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/4c333c1e-99b1-4d6b-96fd-3cb5ef5d5f83.png" 
+                src="/lovable-uploads/29761aa9-0e88-4290-bdfb-381035071968.png" 
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-10 md:h-12 lg:h-14" 
               />
@@ -59,3 +59,4 @@ const Header = () => {
 };
 
 export default Header;
+

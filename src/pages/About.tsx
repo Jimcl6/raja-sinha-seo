@@ -37,7 +37,7 @@ const About = () => {
               <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center lg:justify-end">
                 <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-100 shadow-xl">
                   <img 
-                    src="/lovable-uploads/7806e948-dad2-4255-b973-64a352c4a0df.png" 
+                    src="/lovable-uploads/01ac6572-e5af-41d9-8f12-cf175b932d61.png" 
                     alt="Raja Sinha" 
                     className="w-full h-full object-cover object-center"
                   />

@@ -100,8 +100,8 @@ const About = () => {
                     <div className="rounded-lg overflow-hidden shadow-lg border border-gray-100">
                       <div className="aspect-w-4 aspect-h-3 w-full bg-gray-100">
                         <img 
-                          src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                          alt="Working on SEO" 
+                          src="/lovable-uploads/f58edded-4932-42c6-bd20-f5c5aa22069b.png" 
+                          alt="Raja Sinha" 
                           className="w-full h-full object-cover"
                         />
                       </div>

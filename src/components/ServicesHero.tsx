@@ -31,8 +31,8 @@ const ServicesHero = () => {
           <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center lg:justify-end">
             <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-yellow-100 w-full max-w-md aspect-[4/3]">
               <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="SEO Services" 
+                src="/lovable-uploads/7532a2f8-b4e4-437a-80c4-28235766761e.png" 
+                alt="Raja Sinha SEO Consultancy" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-transparent pointer-events-none"></div>

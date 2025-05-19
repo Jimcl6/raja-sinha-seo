@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
           
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
-            <div className="relative w-64 h-64 md:w-[77px] md:h-[77px] lg:w-[320px] lg:h-[320px] shadow-xl">
+            <div className="relative w-64 h-64 md:w-[154px] md:h-[77px] lg:w-[640px] lg:h-[320px] shadow-xl">
               <img 
                 src="/lovable-uploads/d99b57ad-f414-4fe6-96c1-7ce95c64cafa.png" 
                 alt="Raja Sinha" 

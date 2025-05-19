@@ -2,8 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <div className="relative overflow-hidden bg-white pt-16 pb-16 md:pt-20 md:pb-24">
       <div className="absolute inset-0 z-0 opacity-5">
@@ -45,7 +48,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
             <div className="relative w-64 h-64 md:w-[320px] md:h-[320px] lg:w-[640px] lg:h-[320px] shadow-xl">
               <img 
-                src="/lovable-uploads/76e19e5c-ae3d-4ec6-81a9-2d40deb1c69a.png" 
+                src={isMobile ? "/lovable-uploads/9c18afd3-0796-4a51-b36e-37bfb672ba06.png" : "/lovable-uploads/76e19e5c-ae3d-4ec6-81a9-2d40deb1c69a.png"} 
                 alt="Raja Sinha" 
                 className="w-full h-full object-cover object-center"
               />

@@ -48,7 +48,10 @@ const Header = () => {
               </Link>
             </nav>
             
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
+            <Button 
+              className="bg-yellow-500 hover:bg-yellow-600 text-white"
+              onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+            >
               Book a Call
             </Button>
           </div>

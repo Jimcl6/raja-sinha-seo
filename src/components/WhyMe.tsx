@@ -93,7 +93,10 @@ const WhyMe = () => {
               If you're done with vague SEO talk and want someone who's helped over 100 clients grow real traffic — 
               let's talk. I'll show you what's possible for your business and how we can get there.
             </p>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-6 text-lg">
+            <Button 
+              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-6 text-lg"
+              onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+            >
               Schedule Your Free Strategy Call
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

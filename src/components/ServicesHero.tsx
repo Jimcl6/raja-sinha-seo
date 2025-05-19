@@ -22,7 +22,11 @@ const ServicesHero = () => {
               No fluff, no guesswork — just expert-level optimization that actually works.
             </p>
             
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black px-6">
+            <Button 
+              size="lg" 
+              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6"
+              onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+            >
               Book a Free Strategy Call
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

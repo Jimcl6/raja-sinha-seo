@@ -19,7 +19,10 @@ const ClientHelp = () => {
                 <p className="text-white text-lg mb-6">
                   Book your SEO consultation now and receive a complimentary website audit worth $250
                 </p>
-                <Button className="bg-white text-yellow-600 hover:bg-gray-100">
+                <Button 
+                  className="bg-white text-yellow-600 hover:bg-gray-100"
+                  onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+                >
                   Claim This Offer <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>

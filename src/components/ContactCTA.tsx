@@ -5,7 +5,7 @@ import { Mail, Calendar, ArrowRight } from 'lucide-react';
 
 const ContactCTA = () => {
   return (
-    <div className="py-16 md:py-24 bg-yellow-500 text-black">
+    <div className="py-16 md:py-24 bg-yellow-500 text-black" id="contact">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your SEO?</h2>
@@ -23,7 +23,10 @@ const ContactCTA = () => {
               <p className="text-gray-600 mb-6">
                 Schedule a free 30-minute call to discuss your SEO goals and get personalized recommendations.
               </p>
-              <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+              <Button 
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"
+                onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+              >
                 Schedule Now <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -37,7 +40,11 @@ const ContactCTA = () => {
               <p className="text-gray-600 mb-6">
                 Have questions or prefer email? Send me a message and I'll get back to you within 24 hours.
               </p>
-              <Button variant="outline" className="w-full border-yellow-500 text-yellow-600 hover:bg-yellow-50">
+              <Button 
+                variant="outline" 
+                className="w-full border-yellow-500 text-yellow-600 hover:bg-yellow-50"
+                onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+              >
                 Contact Me <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

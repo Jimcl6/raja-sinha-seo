@@ -49,7 +49,10 @@ const ThreeHourService = () => {
                 <p className="text-yellow-600 font-semibold mt-2 mb-4">
                   I can take you further.
                 </p>
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-black">
+                <Button 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black"
+                  onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+                >
                   Book Your 3-Hour Diagnosis
                 </Button>
               </CardContent>

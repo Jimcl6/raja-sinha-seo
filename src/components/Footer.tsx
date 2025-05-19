@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, Twitter, Mail, ChevronRight } from 'lucide-react';
+import { Facebook, Instagram, TikTok, Youtube, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,17 +11,20 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Raja Sinha SEO Consultancy</h3>
             <p className="text-gray-400 mb-4">
-              Providing strategic SEO services with a business-owner mindset for over 15 years.
+              Providing strategic SEO services with a business owner mindset for over 15 years.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                <Linkedin className="h-5 w-5" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                <Twitter className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                <Mail className="h-5 w-5" />
+                <TikTok className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -39,19 +42,7 @@ const Footer = () => {
               <li>
                 <a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
-                  <span>About Me</span>
-                </a>
-              </li>
-              <li>
-                <a href="#approach" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  <span>My Approach</span>
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  <span>Testimonials</span>
+                  <span>About</span>
                 </a>
               </li>
               <li>
@@ -69,11 +60,11 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Have questions or want to discuss your SEO needs? Reach out directly:
             </p>
-            <a href="mailto:raja@example.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-              raja@example.com
+            <a href="mailto:raja@RajaSinhaSEO.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+              raja@RajaSinhaSEO.com
             </a>
             <p className="text-gray-400 mt-4">
-              Response time: Within 24 hours
+              Response time: Fast
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ const ContactCTA = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your SEO?</h2>
           <p className="text-xl md:text-2xl mb-10 text-yellow-900">
-            Let's talk about your business goals and how strategic SEO can help you achieve them.
+            Let's talk about your business goals and how strategic SEO can help you.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -50,8 +50,8 @@ const ContactCTA = () => {
             </div>
           </div>
           
-          <p className="text-yellow-900 mt-8">
-            Your success is my priority. Let's create an SEO strategy that works.
+          <p className="text-black mt-10 text-xl font-bold">
+            Your success is my priority. Let's create an SEO strategy.
           </p>
         </div>
       </div>

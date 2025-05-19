@@ -43,7 +43,7 @@ const ContactCTA = () => {
               <Button 
                 variant="outline" 
                 className="w-full border-yellow-500 text-yellow-600 hover:bg-yellow-50"
-                onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+                onClick={() => window.open('mailto:raja@RajaSinhaSEO.com', '_blank')}
               >
                 Contact Me <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

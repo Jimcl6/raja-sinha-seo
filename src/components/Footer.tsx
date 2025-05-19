@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, TikTok, Youtube, ChevronRight } from 'lucide-react';
+import { Facebook, Instagram, Youtube, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -21,7 +21,14 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
-                <TikTok className="h-5 w-5" />
+                {/* Custom TikTok icon since it's not available in lucide-react */}
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+                  <path d="M15 8h.01"/>
+                  <path d="M9 12v-8a5 5 0 0 1 5 5v3"/>
+                  <line x1="13" y1="16" x2="15" y2="16"/>
+                  <line x1="13" y1="12" x2="15" y2="12"/>
+                </svg>
               </a>
               <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Youtube className="h-5 w-5" />

@@ -8,7 +8,7 @@ const Credentials = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/01f2c3c0-50d7-402a-a117-fdfa3ca7750e.png" 
+          src="/lovable-uploads/1518e885-7368-46eb-b2a1-632023b3df5e.png" 
           alt="Credentials background" 
           className="w-full h-full object-cover"
         />

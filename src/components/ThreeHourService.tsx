@@ -2,16 +2,21 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 
 const ThreeHourService = () => {
   return (
     <section className="py-16 bg-yellow-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Fix, Repair & Improve Your Website — in <span className="text-yellow-500">Just 3 Hours</span>
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Fix, Repair & Improve Your Website — in <span className="text-yellow-500">Just 3 Hours</span>
+            </h2>
+            <div className="ml-3 h-10 w-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center animate-pulse">
+              <Star className="h-6 w-6" />
+            </div>
+          </div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Get a full expert diagnosis that shows you exactly what's working, what's not, and what to fix — fast.
           </p>
@@ -62,7 +67,7 @@ const ThreeHourService = () => {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-xl shadow-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/6b14efb6-e2b1-4330-b1a9-817cc7ee9a5b.png" 
+                src="/lovable-uploads/7806e948-dad2-4255-b973-64a352c4a0df.png" 
                 alt="Code on computer screen" 
                 className="h-full w-full object-cover"
               />

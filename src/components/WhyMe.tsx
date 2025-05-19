@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Target, Users, Search, PieChart } from 'lucide-react';
+import { ArrowRight, Briefcase, MessageSquareText, Award, FileSearch, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const WhyMe = () => {
@@ -34,7 +34,7 @@ const WhyMe = () => {
           <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
-                <Target className="h-6 w-6" />
+                <Briefcase className="h-6 w-6" />
               </div>
             </div>
             <div>
@@ -48,7 +48,7 @@ const WhyMe = () => {
           <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
-                <Users className="h-6 w-6" />
+                <MessageSquareText className="h-6 w-6" />
               </div>
             </div>
             <div>
@@ -62,7 +62,7 @@ const WhyMe = () => {
           <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
-                <Search className="h-6 w-6" />
+                <Award className="h-6 w-6" />
               </div>
             </div>
             <div>
@@ -76,7 +76,7 @@ const WhyMe = () => {
           <div className="flex gap-4 bg-white/80 p-6 rounded-lg shadow-sm">
             <div className="flex-shrink-0">
               <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
-                <PieChart className="h-6 w-6" />
+                <Zap className="h-6 w-6" />
               </div>
             </div>
             <div>
@@ -90,8 +90,8 @@ const WhyMe = () => {
         <div className="mt-16 text-center">
           <div className="bg-white p-8 md:p-10 rounded-lg shadow-md max-w-3xl mx-auto">
             <p className="text-lg md:text-xl font-medium mb-6">
-              If you're done with vague SEO talk and want someone who's helped over 100 clients grow real traffic — 
-              let's talk. I'll show you what's possible for your business and how we can get there.
+              If you're done with vague SEO talk and want someone who's helped hundreds of SEO campaigns grow real traffic — 
+              let's talk. I'll show you what's possible for your business and how to get there.
             </p>
             <Button 
               className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-6 text-lg"

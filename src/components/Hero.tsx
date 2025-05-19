@@ -19,10 +19,10 @@ const Hero = () => {
             </h1>
             
             <div className="space-y-1">
-              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 slide-up">
+              <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 slide-up">
                 No Guesswork, Only Results!
               </p>
-              <p className="text-lg md:text-xl text-yellow-500 font-bold max-w-2xl mx-auto lg:mx-0 slide-up">
+              <p className="text-xl md:text-2xl text-yellow-600 font-bold max-w-2xl mx-auto lg:mx-0 slide-up">
                 15+ years of experience.
               </p>
             </div>

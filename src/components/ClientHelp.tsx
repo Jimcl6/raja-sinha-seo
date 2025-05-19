@@ -33,7 +33,7 @@ const ClientHelp = () => {
                 />
               </div>
               <CardTitle className="text-xl">"I Don't Believe in SEO"</CardTitle>
-              <CardDescription>You've heard SEO takes forever, or maybe you've been burned by empty promises.</CardDescription>
+              <CardDescription className="font-feature italic">You've heard SEO takes forever, or maybe you've been burned by empty promises.</CardDescription>
             </CardHeader>
             <CardContent>
               <h4 className="font-semibold text-yellow-600 mb-3">How I Help:</h4>
@@ -65,7 +65,7 @@ const ClientHelp = () => {
                 />
               </div>
               <CardTitle className="text-xl">"I Tried SEO But Gave Up"</CardTitle>
-              <CardDescription>You invested in SEO, didn't see results, and moved on.</CardDescription>
+              <CardDescription className="font-feature italic">You invested in SEO, didn't see results, and moved on.</CardDescription>
             </CardHeader>
             <CardContent>
               <h4 className="font-semibold text-yellow-600 mb-3">How I Help:</h4>
@@ -98,7 +98,7 @@ const ClientHelp = () => {
                 />
               </div>
               <CardTitle className="text-xl">"I'm Doing Okay — But Not Growing"</CardTitle>
-              <CardDescription>You're ranking for a few keywords and getting some traffic — but it's not moving the needle.</CardDescription>
+              <CardDescription className="font-feature italic">You're ranking for a few keywords and getting some traffic — but it's not moving the needle.</CardDescription>
             </CardHeader>
             <CardContent>
               <h4 className="font-semibold text-yellow-600 mb-3">How I Help:</h4>

@@ -89,7 +89,7 @@ const WhyMe = () => {
         
         <div className="mt-16 text-center">
           <div className="bg-white p-8 md:p-10 rounded-lg shadow-md max-w-3xl mx-auto">
-            <p className="text-lg md:text-xl font-medium mb-6">
+            <p className="text-lg md:text-xl font-medium mb-6 font-feature italic">
               If you're done with vague SEO talk and want someone who's helped hundreds of SEO campaigns grow real traffic — 
               let's talk. I'll show you what's possible for your business and how to get there.
             </p>

@@ -2,11 +2,43 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const ClientHelp = () => {
   return (
     <div className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
+        {/* Promotional banner */}
+        <div className="mb-10 relative overflow-hidden rounded-xl">
+          <div className="bg-gradient-to-r from-yellow-400 to-amber-600 p-6 md:p-10">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-2/3">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  Limited Time Offer: 20% Off All Services
+                </h3>
+                <p className="text-white text-lg mb-6">
+                  Book your SEO consultation now and receive a complimentary website audit worth $250
+                </p>
+                <Button className="bg-white text-yellow-600 hover:bg-gray-100">
+                  Claim This Offer <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+              <div className="md:w-1/3 mt-6 md:mt-0 md:flex justify-end">
+                <div className="h-40 w-40 md:h-48 md:w-48 relative">
+                  <img 
+                    src="/lovable-uploads/01ac6572-e5af-41d9-8f12-cf175b932d61.png" 
+                    alt="Special Offer" 
+                    className="object-contain"
+                  />
+                  <div className="absolute -top-3 -right-3 bg-red-500 text-white text-sm font-bold rounded-full h-16 w-16 flex items-center justify-center transform rotate-12">
+                    <span>20%<br/>OFF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Who I Help — No Matter Where You're Starting From

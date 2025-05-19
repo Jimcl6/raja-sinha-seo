@@ -4,18 +4,28 @@ import { CheckCircle2, Award, TrendingUp, Globe2 } from 'lucide-react';
 
 const Credentials = () => {
   return (
-    <div className="bg-gradient-to-r from-yellow-50 to-amber-50 py-16 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-500"></div>
+    <div className="relative py-16 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/01f2c3c0-50d7-402a-a117-fdfa3ca7750e.png" 
+          alt="Credentials background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-yellow-500/80 mix-blend-multiply"></div>
+      </div>
       
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      {/* Top border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-500 z-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Credentials You Can Trust
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Credential 1 */}
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+          <div className="bg-white/90 backdrop-blur rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
               <Award className="h-6 w-6" />
             </div>
@@ -24,7 +34,7 @@ const Credentials = () => {
           </div>
           
           {/* Credential 2 */}
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+          <div className="bg-white/90 backdrop-blur rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
               <CheckCircle2 className="h-6 w-6" />
             </div>
@@ -33,7 +43,7 @@ const Credentials = () => {
           </div>
           
           {/* Credential 3 */}
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+          <div className="bg-white/90 backdrop-blur rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
               <Globe2 className="h-6 w-6" />
             </div>
@@ -42,7 +52,7 @@ const Credentials = () => {
           </div>
           
           {/* Credential 4 */}
-          <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+          <div className="bg-white/90 backdrop-blur rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
               <TrendingUp className="h-6 w-6" />
             </div>

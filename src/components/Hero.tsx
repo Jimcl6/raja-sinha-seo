@@ -18,12 +18,14 @@ const Hero = () => {
               <span className="gradient-text">Business Owner's Mindset.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mt-4 max-w-2xl mx-auto lg:mx-0 slide-up">
-              No Guesswork, Only Results!
-            </p>
-            <p className="text-lg md:text-xl text-gray-600 mt-2 max-w-2xl mx-auto lg:mx-0 slide-up">
-              15+ years of experience.
-            </p>
+            <div className="space-y-1"> {/* Reduced space between these elements */}
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 slide-up">
+                No Guesswork, Only Results!
+              </p>
+              <p className="text-lg md:text-xl text-yellow-500 font-bold max-w-2xl mx-auto lg:mx-0 slide-up">
+                15+ years of experience.
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black px-6">

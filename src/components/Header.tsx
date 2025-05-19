@@ -30,19 +30,19 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-8">
               <Link 
                 to="/services" 
-                className={`transition-colors ${isActive('/services') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+                className={`transition-colors font-bold ${isActive('/services') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
               >
                 Services
               </Link>
               <Link 
                 to="/about" 
-                className={`transition-colors ${isActive('/about') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+                className={`transition-colors font-bold ${isActive('/about') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
               >
                 About
               </Link>
               <Link 
                 to="/#contact" 
-                className={`transition-colors ${isActive('/#contact') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+                className={`transition-colors font-bold ${isActive('/#contact') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
               >
                 Contact
               </Link>
@@ -59,4 +59,3 @@ const Header = () => {
 };
 
 export default Header;
-

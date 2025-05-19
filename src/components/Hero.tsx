@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
           
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-end">
-            <div className="relative w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] shadow-xl">
+            <div className="relative w-64 h-64 md:w-[77px] md:h-[77px] lg:w-[400px] lg:h-[400px] shadow-xl">
               <img 
                 src="/lovable-uploads/d99b57ad-f414-4fe6-96c1-7ce95c64cafa.png" 
                 alt="Raja Sinha" 

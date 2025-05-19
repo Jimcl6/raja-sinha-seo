@@ -19,7 +19,7 @@ const WhyMe = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Work With Me?</h2>
-          <p className="text-xl text-gray-700 mb-4">
+          <p className="text-xl font-feature italic text-gray-700 mb-4">
             I don't just think like an SEO — I think like a business owner.
           </p>
           <p className="text-lg text-gray-600">

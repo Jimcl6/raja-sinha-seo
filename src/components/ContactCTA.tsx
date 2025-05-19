@@ -9,7 +9,7 @@ const ContactCTA = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your SEO?</h2>
-          <p className="text-xl md:text-2xl mb-10 text-yellow-900">
+          <p className="text-xl md:text-2xl mb-10 font-feature italic text-yellow-900">
             Let's talk about your business goals and how strategic SEO can help you.
           </p>
           

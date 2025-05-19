@@ -12,7 +12,7 @@ const ClientHelp = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Who I Help
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg font-feature italic text-gray-600">
             No Matter Where You're Starting From
           </p>
           <p className="text-base text-gray-600 mt-4">

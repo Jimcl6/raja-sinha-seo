@@ -17,8 +17,9 @@ const ThreeHourService = () => {
               <Star className="h-6 w-6" />
             </div>
           </div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Get a full expert diagnosis that shows you exactly what's working, what's not, and what to fix — fast.
+          <p className="font-feature italic text-xl text-gray-700 max-w-3xl mx-auto">
+            Get a Full Expert Diagnosis that shows you exactly<br />
+            what's working, what's not, and what to fix — fast.
           </p>
         </div>
 

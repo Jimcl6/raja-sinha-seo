@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -115,3 +115,9 @@
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600;
 }
+
+.feature-font {
+  font-family: 'Libre Baskerville', serif;
+  @apply italic;
+}
+

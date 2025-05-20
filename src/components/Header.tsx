@@ -47,8 +47,8 @@ const Header = () => {
                 About
               </Link>
               <Link 
-                to="/#contact" 
-                className={`transition-colors font-bold ${isActive('/#contact') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+                to="/contact" 
+                className={`transition-colors font-bold ${isActive('/contact') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
               >
                 Contact
               </Link>

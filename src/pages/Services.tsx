@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import ServicesHero from '@/components/ServicesHero';
+import ClientLogos from '@/components/ClientLogos';
 import ServicesAudit from '@/components/ServicesAudit';
 import ServicesALaCarte from '@/components/ServicesALaCarte';
 import ServicesScaling from '@/components/ServicesScaling';
@@ -14,6 +15,7 @@ const Services = () => {
       <Header />
       <main className="flex-grow">
         <ServicesHero />
+        <ClientLogos />
         <ServicesAudit />
         <ServicesALaCarte />
         <ServicesScaling />

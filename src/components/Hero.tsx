@@ -9,7 +9,7 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-16 md:pt-20 md:pb-24">
+    <div className="relative overflow-hidden bg-white pt-16 pb-8 md:pt-20 md:pb-12">
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="h-full w-full bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:20px_20px]"></div>
       </div>

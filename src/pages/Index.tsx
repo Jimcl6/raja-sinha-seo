@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import ClientLogos from '@/components/ClientLogos';
 import Credentials from '@/components/Credentials';
 import ClientHelp from '@/components/ClientHelp';
 import ThreeHourService from '@/components/ThreeHourService';
@@ -15,6 +16,7 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <ClientLogos />
         <Credentials />
         <ThreeHourService />
         <ClientHelp />

@@ -45,12 +45,12 @@ const SeeMyWork = () => {
     },
     {
       id: 4,
-      title: "Wellness Hub",
-      subtitle: "Healthcare Provider Content Strategy",
-      description: "Developing and implementing a comprehensive content strategy for a healthcare provider to establish thought leadership and patient trust.",
-      challenge: "The client needed to distinguish themselves in a crowded healthcare market and build patient trust through authoritative content.",
-      solution: "I developed a multi-channel content strategy focusing on educational content, patient testimonials, and thought leadership pieces distributed across their website, social media, and email campaigns.",
-      results: "200% increase in blog traffic, 45% growth in email subscribers, and significant improvement in patient acquisition from digital channels.",
+      title: "Logistics Company in Southeast Asia",
+      subtitle: "Brand Protection Strategy",
+      description: "A major logistics company in Southeast Asia specializing in cargo transport faced significant challenges with keyword hijacking by competitors.",
+      challenge: "Competitors were hijacking the client's brand name in both paid search and organic results. When users searched for the client's brand name, they would often see competitor results instead.",
+      solution: "I developed a comprehensive brand protection strategy that involved generating high-authority content across multiple platforms. We created and optimized numerous pages that mentioned their brand name and linked back to their main website, effectively creating a protective shield around their brand in search results.",
+      results: "We successfully dominated search results with approximately 100 pages of brand-related content. For at least the first 10 pages of Google results when searching their brand name, users would see nothing but content related to their brand. This was accomplished through strategic content collaboration and link building, resulting in a highly satisfied client.",
       image: "/lovable-uploads/57b027fb-50e3-4ee9-a558-f9ee7d926667.png"
     }
   ];
@@ -64,7 +64,8 @@ const SeeMyWork = () => {
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Case Studies</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-              Explore how my strategic SEO expertise has helped businesses transform their digital presence and achieve measurable results.
+              Explore how I discover my clients' struggles and obstacles through meaningful conversation,
+              understand their traffic challenges, and deliver tailored solutions with measurable results.
             </p>
           </div>
         </div>

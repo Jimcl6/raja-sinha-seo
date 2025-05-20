@@ -62,6 +62,16 @@ const SeeMyWork = () => {
       solution: "After recognizing that the white-label approach was causing inefficiencies, I consulted with my client to position me as a manager within their company. This allowed me to work directly with their customers, eliminating the communication barriers.",
       results: "We successfully ranked their clients in the competitive UK market, serving both B2B and B2C customers effectively. The streamlined communication process and quality results led to rapid growth, with the agency scaling from 1-2 clients to managing 50 campaigns in less than two weeks.",
       image: "/lovable-uploads/533a35a0-e5db-4b41-82f9-ecea43483e5c.png"
+    },
+    {
+      id: 6,
+      title: "Digital Marketing Agency with Real Estate Focus",
+      subtitle: "Outmaneuvering Aggregator Sites",
+      description: "A digital marketing and web design company from the West Coast with over 50 real estate clients nationwide needed a strategy to compete with dominant aggregator sites.",
+      challenge: "Real estate search was increasingly dominated by aggregator websites like Zillow, Redfin, and Movato, making it difficult for individual real estate clients to rank well in search results.",
+      solution: "We developed a strategy focusing on niche keywords and search patterns that aggregator sites weren't effectively addressing. Instead of competing head-on with high-competition keywords, we identified underserved search intent opportunities.",
+      results: "By sidestepping the most competitive keywords and focusing on low to medium competition long-tail keywords with higher transactional intent, we achieved strong rankings that delivered better conversion rates than the broader terms our clients were previously targeting.",
+      image: "/lovable-uploads/4c537e3a-df75-43f1-99f4-644737922e70.png"
     }
   ];
 

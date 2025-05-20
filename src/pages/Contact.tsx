@@ -64,7 +64,7 @@ const Contact = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-center mb-12 max-w-3xl mx-auto font-feature italic text-gray-600">
-            Let's discuss how strategic SEO can transform your business
+            Not for nothing, but if you're here for SEO — you came to the right place.
           </p>
 
           {/* Added Client Logos Section */}

@@ -6,7 +6,7 @@ import { Check, Clock } from 'lucide-react';
 
 const ThreeHourService = () => {
   return (
-    <section className="py-16 bg-yellow-50">
+    <section className="py-16 bg-[#f0f0f0]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">

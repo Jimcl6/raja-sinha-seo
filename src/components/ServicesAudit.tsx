@@ -10,7 +10,7 @@ const ServicesAudit = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div className="w-full md:w-1/3 flex justify-center">
-              <div className="h-20 w-20 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+              <div className="h-20 w-20 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center">
                 <Wrench className="h-10 w-10" />
               </div>
             </div>
@@ -26,7 +26,7 @@ const ServicesAudit = () => {
                 what could push you forward. Then, we move smart.
               </p>
               
-              <Card className="p-6 bg-yellow-50 border-yellow-100 mb-8">
+              <Card className="p-6 bg-[#f0f0f0] border-yellow-100 mb-8">
                 <h3 className="text-xl font-bold mb-4">✅ Core Audit Includes:</h3>
                 <ul className="space-y-3">
                   {[

@@ -17,7 +17,7 @@ const ContactCTA = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Option 1: Book a Call */}
             <div className="bg-white text-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-16 w-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="h-16 w-16 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Calendar className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Book a Strategy Call</h3>
@@ -34,7 +34,7 @@ const ContactCTA = () => {
             
             {/* Option 2: Email */}
             <div className="bg-white text-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="h-16 w-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="h-16 w-16 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Mail className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>

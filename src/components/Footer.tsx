@@ -10,7 +10,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Column 1 - About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Raja Sinha SEO Consultancy</h3>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src="/lovable-uploads/28398c53-5192-4ffd-b428-a51a7f922f58.png" 
+                alt="Raja Sinha SEO Consultancy" 
+                className="h-10 w-auto"
+              />
+            </Link>
             <p className="text-gray-400 mb-4">
               Providing strategic SEO services with a business owner mindset for over 15 years.
             </p>

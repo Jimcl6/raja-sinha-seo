@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-4">
               <img 
-                src="/lovable-uploads/28398c53-5192-4ffd-b428-a51a7f922f58.png" 
+                src="/lovable-uploads/96068ae5-19d3-468f-9a1b-bcfa97b9fd13.png" 
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-10 w-auto"
               />

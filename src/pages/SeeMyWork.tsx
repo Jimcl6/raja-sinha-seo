@@ -52,6 +52,16 @@ const SeeMyWork = () => {
       solution: "I developed a comprehensive brand protection strategy that involved generating high-authority content across multiple platforms. We created and optimized numerous pages that mentioned their brand name and linked back to their main website, effectively creating a protective shield around their brand in search results.",
       results: "We successfully dominated search results with approximately 100 pages of brand-related content. For at least the first 10 pages of Google results when searching their brand name, users would see nothing but content related to their brand. This was accomplished through strategic content collaboration and link building, resulting in a highly satisfied client.",
       image: "/lovable-uploads/57b027fb-50e3-4ee9-a558-f9ee7d926667.png"
+    },
+    {
+      id: 5,
+      title: "SEO Agency in the UK",
+      subtitle: "From a Single Campaign to 50 Campaigns Per Month",
+      description: "A startup SEO agency in the UK with only one or two customers needed to scale their operations significantly.",
+      challenge: "While white-labeling their campaigns, we encountered significant communication gaps between our client and their clients. Misunderstandings and misconceptions threatened to make the process unnecessarily complicated.",
+      solution: "After recognizing that the white-label approach was causing inefficiencies, I consulted with my client to position me as a manager within their company. This allowed me to work directly with their customers, eliminating the communication barriers.",
+      results: "We successfully ranked their clients in the competitive UK market, serving both B2B and B2C customers effectively. The streamlined communication process and quality results led to rapid growth, with the agency scaling from 1-2 clients to managing 50 campaigns in less than two weeks.",
+      image: "/lovable-uploads/533a35a0-e5db-4b41-82f9-ecea43483e5c.png"
     }
   ];
 
@@ -62,7 +72,7 @@ const SeeMyWork = () => {
         {/* Hero Section */}
         <div className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">Case Studies</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">My Work</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
               Explore how I discover my clients' struggles and obstacles through meaningful conversation,
               understand their traffic challenges, and deliver tailored solutions with measurable results.

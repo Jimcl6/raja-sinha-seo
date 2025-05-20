@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -39,9 +40,11 @@ const Hero = () => {
                 Book a Free Strategy Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg" className="border-yellow-500 text-yellow-600 hover:bg-yellow-50">
-                See My Work
-              </Button>
+              <Link to="/work">
+                <Button variant="outline" size="lg" className="border-yellow-500 text-yellow-600 hover:bg-yellow-50">
+                  See My Work
+                </Button>
+              </Link>
             </div>
           </div>
           

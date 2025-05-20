@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check, Star } from 'lucide-react';
+import { Check, Clock } from 'lucide-react';
 
 const ThreeHourService = () => {
   return (
@@ -14,7 +14,7 @@ const ThreeHourService = () => {
               Fix, Repair & Improve Your Website — in <span className="text-yellow-500">Just 3 Hours</span>
             </h2>
             <div className="ml-3 h-10 w-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center animate-pulse">
-              <Star className="h-6 w-6" />
+              <Clock className="h-6 w-6" />
             </div>
           </div>
           <p className="font-feature italic text-xl text-gray-700 max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ const ThreeHourService = () => {
                   className="bg-yellow-500 hover:bg-yellow-600 text-black"
                   onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
                 >
-                  Book Your 3-Hour Diagnosis
+                  Book A Call Now
                 </Button>
               </CardContent>
             </Card>

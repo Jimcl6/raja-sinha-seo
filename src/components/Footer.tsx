@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Instagram, Youtube, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -41,21 +42,40 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
+                <Link to="/services" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>Services</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
+                <Link to="/about" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>About</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
+                <Link to="/contact" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   <span>Contact</span>
+                </Link>
+              </li>
+              {/* Added See My Work link */}
+              <li>
+                <Link to="/work" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
+                  <ChevronRight className="h-4 w-4 mr-2" />
+                  <span>See My Work</span>
+                </Link>
+              </li>
+              {/* Added Book a Call link */}
+              <li>
+                <a 
+                  href="https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center"
+                >
+                  <ChevronRight className="h-4 w-4 mr-2" />
+                  <span>Book a Call</span>
                 </a>
               </li>
             </ul>
@@ -67,8 +87,8 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Have questions or want to discuss your SEO needs? Reach out directly:
             </p>
-            <a href="mailto:raja@RajaSinhaSEO.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-              raja@RajaSinhaSEO.com
+            <a href="mailto:raja@rajasinhaSEO.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+              raja@rajasinhaSEO.com
             </a>
             <p className="text-gray-400 mt-4">
               Response time: Fast

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Mail, Calendar, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContactCTA = () => {
   return (
@@ -40,13 +41,14 @@ const ContactCTA = () => {
               <p className="text-gray-600 mb-6">
                 Have questions or prefer email? Send me a message and I'll get back to you within 24 hours.
               </p>
-              <Button 
-                variant="outline" 
-                className="w-full border-yellow-500 text-yellow-600 hover:bg-yellow-50"
-                onClick={() => window.open('mailto:raja@RajaSinhaSEO.com', '_blank')}
-              >
-                Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  variant="outline" 
+                  className="w-full border-yellow-500 text-yellow-600 hover:bg-yellow-50"
+                >
+                  Contact Me <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
           

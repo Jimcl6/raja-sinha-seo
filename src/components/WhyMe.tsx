@@ -2,15 +2,16 @@
 import React from 'react';
 import { ArrowRight, Briefcase, MessageSquareText, Award, FileSearch, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const WhyMe = () => {
   return (
     <div className="py-16 md:py-24 relative">
-      {/* Background image with overlay */}
+      {/* Background image with overlay - using a different high-quality image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/1518e885-7368-46eb-b2a1-632023b3df5e.png" 
-          alt="Laptop on desk" 
+          src="/lovable-uploads/4c333c1e-99b1-4d6b-96fd-3cb5ef5d5f83.png" 
+          alt="SEO Workspace" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-white/50"></div>

@@ -56,7 +56,7 @@ const Header = () => {
             
             <Button 
               className="bg-yellow-500 hover:bg-yellow-600 text-white"
-              onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+              onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
             >
               Book a Call
             </Button>

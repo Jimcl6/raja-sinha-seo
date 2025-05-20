@@ -95,7 +95,7 @@ const WhyMe = () => {
             </p>
             <Button 
               className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-6 text-lg"
-              onClick={() => window.open('https://calendly.com/filnep-qwgu/30min', '_blank')}
+              onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
             >
               Schedule Your Free Strategy Call
               <ArrowRight className="ml-2 h-5 w-5" />

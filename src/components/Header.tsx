@@ -35,6 +35,12 @@ const Header = () => {
                 Services
               </Link>
               <Link 
+                to="/work" 
+                className={`transition-colors font-bold ${isActive('/work') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+              >
+                See My Work
+              </Link>
+              <Link 
                 to="/about" 
                 className={`transition-colors font-bold ${isActive('/about') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
               >

@@ -13,7 +13,7 @@ const ThreeHourService = () => {
             <h2 className="text-3xl md:text-4xl font-bold">
               Fix, Repair & Improve Your Website — in <span className="text-yellow-500">Just 3 Hours</span>
             </h2>
-            <div className="ml-3 h-10 w-10 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center animate-pulse">
+            <div className="ml-3 h-10 w-10 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center animate-pulse">
               <Clock className="h-6 w-6" />
             </div>
           </div>
@@ -40,14 +40,14 @@ const ThreeHourService = () => {
                   "If you're on the right track — or drifting from your goals"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <Check className="h-5 w-5 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-black mr-2 mt-1 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <Card className="border-yellow-100 bg-white">
+            <Card className="border-[#f0f0f0] bg-white">
               <CardContent className="pt-6">
                 <p className="text-lg font-medium">
                   If you need help implementing changes.

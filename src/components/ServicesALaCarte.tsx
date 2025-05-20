@@ -25,7 +25,7 @@ const ServicesALaCarte = () => {
               "Strategy consulting — for teams or solo founders"
             ].map((service, index) => (
               <Card key={index} className="p-6 bg-white hover:shadow-lg transition-shadow duration-300 flex items-start">
-                <Check className="h-5 w-5 text-yellow-500 mr-3 mt-1" />
+                <Check className="h-5 w-5 text-black mr-3 mt-1" />
                 <span className="text-lg">{service}</span>
               </Card>
             ))}

@@ -26,7 +26,7 @@ const ServicesAudit = () => {
                 what could push you forward. Then, we move smart.
               </p>
               
-              <Card className="p-6 bg-[#f0f0f0] border-yellow-100 mb-8">
+              <Card className="p-6 bg-[#f0f0f0] border-[#f0f0f0] mb-8">
                 <h3 className="text-xl font-bold mb-4">✅ Core Audit Includes:</h3>
                 <ul className="space-y-3">
                   {[
@@ -39,7 +39,7 @@ const ServicesAudit = () => {
                     "Design & UX review (forms, flow, mobile usability)"
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <Check className="h-5 w-5 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-black mr-2 mt-1 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}

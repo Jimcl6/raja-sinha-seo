@@ -13,7 +13,7 @@ const ServicesScaling = () => {
           <div className="mb-16">
             <div className="flex flex-col md:flex-row gap-10 items-start">
               <div className="w-full md:w-1/3 flex justify-center">
-                <div className="h-20 w-20 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                <div className="h-20 w-20 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center">
                   <TrendingUp className="h-10 w-10" />
                 </div>
               </div>
@@ -28,7 +28,7 @@ const ServicesScaling = () => {
                   you'll need the right people to support the growth.
                 </p>
                 
-                <Card className="p-6 bg-yellow-50 border-yellow-100 mb-8">
+                <Card className="p-6 bg-[#f0f0f0] border-[#f0f0f0] mb-8">
                   <h3 className="text-xl font-bold mb-4">🧑‍💻 Scalable SEO & Marketing Support</h3>
                   <ul className="space-y-3">
                     {[
@@ -39,7 +39,7 @@ const ServicesScaling = () => {
                       "Senior consultant oversight to keep strategy sharp and results moving"
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <Check className="h-5 w-5 text-yellow-500 mr-2 mt-1 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-black mr-2 mt-1 flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -58,7 +58,7 @@ const ServicesScaling = () => {
           <div className="mt-20">
             <div className="flex flex-col md:flex-row gap-10 items-start">
               <div className="w-full md:w-1/3 flex justify-center">
-                <div className="h-20 w-20 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center">
+                <div className="h-20 w-20 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center">
                   <Users className="h-10 w-10" />
                 </div>
               </div>
@@ -78,7 +78,7 @@ const ServicesScaling = () => {
                   Filipino talent — from essential support to advanced roles.
                 </p>
                 
-                <Card className="p-6 bg-yellow-50 border-yellow-100 mb-8">
+                <Card className="p-6 bg-[#f0f0f0] border-[#f0f0f0] mb-8">
                   <h3 className="text-xl font-bold mb-4">💼 Roles We Can Help You Fill:</h3>
                   <div className="grid grid-cols-1 gap-6">
                     <div>

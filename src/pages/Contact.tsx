@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Mail, Phone, User, CheckCircle, XCircle } from 'lucide-react';
+import { Mail, Phone, User, CheckCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ClientLogos from '@/components/ClientLogos';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -66,7 +67,10 @@ const Contact = () => {
             Let's discuss how strategic SEO can transform your business
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto">
+          {/* Added Client Logos Section */}
+          <ClientLogos />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto mt-12">
             {/* Left column with image and contact info */}
             <div className="flex flex-col justify-center">
               <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-yellow-100 w-full aspect-[4/5] mb-8">

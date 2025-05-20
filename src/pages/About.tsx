@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ClientLogos from '@/components/ClientLogos';
 import { Separator } from '@/components/ui/separator';
 import { Book, Brain, ArrowRight, User, BookText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -46,6 +47,9 @@ const About = () => {
             </div>
           </div>
         </section>
+        
+        {/* Added Client Logos Section */}
+        <ClientLogos />
         
         {/* Introduction Section with Cards */}
         <section className="py-16 bg-white">
@@ -218,6 +222,10 @@ const About = () => {
             </div>
           </div>
         </section>
+        
+        {/* Added Client Logos Section */}
+        <ClientLogos />
+        
       </main>
       <Footer />
     </div>

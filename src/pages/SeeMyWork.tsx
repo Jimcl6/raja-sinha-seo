@@ -104,7 +104,7 @@ const SeeMyWork = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-2xl">{study.title}</CardTitle>
-                  <CardDescription className="text-lg text-yellow-600 font-medium">{study.subtitle}</CardDescription>
+                  <CardDescription className="text-lg text-yellow-600 font-medium font-feature">{study.subtitle}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">{study.description}</p>

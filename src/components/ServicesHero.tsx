@@ -33,9 +33,9 @@ const ServicesHero = () => {
           </div>
           
           <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center lg:justify-end">
-            <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-[#f0f0f0] w-full max-w-md aspect-[4/3]">
+            <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-[#f0f0f0] w-full max-w-md aspect-[2/1]">
               <img 
-                src="/lovable-uploads/7532a2f8-b4e4-437a-80c4-28235766761e.png" 
+                src="/lovable-uploads/abbcf8c7-c8ec-4d84-8e6c-8c8a8975ec9a.png" 
                 alt="Raja Sinha SEO Consultancy" 
                 className="w-full h-full object-cover"
               />

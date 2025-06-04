@@ -68,7 +68,7 @@ const ThreeHourService = () => {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-xl shadow-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/42e582af-f809-4f7f-86a7-6bceebf8a973.png" 
+                src="/lovable-uploads/e9c83291-d2a8-4ebc-a512-bcacbdc0a886.png" 
                 alt="Raja Sinha" 
                 className="h-full w-full object-cover"
               />

@@ -74,11 +74,11 @@ const ClientLogos = () => {
                 // Show 2 logos on mobile, 4 on desktop
                 isMobile ? "basis-1/2" : "basis-1/4"
               )}>
-                <div className="h-24 md:h-32 flex items-center justify-center p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-[134px] flex items-center justify-center p-4 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="max-h-full max-w-full object-contain" 
+                    className="w-[200px] h-[134px] object-contain" 
                   />
                 </div>
               </CarouselItem>

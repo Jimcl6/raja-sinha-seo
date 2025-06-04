@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { 
   Carousel, 
@@ -11,16 +10,15 @@ import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const clientLogos = [
-  { src: "/lovable-uploads/01ac6572-e5af-41d9-8f12-cf175b932d61.png", alt: "Client 1" },
-  { src: "/lovable-uploads/01f2c3c0-50d7-402a-a117-fdfa3ca7750e.png", alt: "Client 2" },
-  { src: "/lovable-uploads/1518e885-7368-46eb-b2a1-632023b3df5e.png", alt: "Client 3" },
-  { src: "/lovable-uploads/2ac2aba0-ccfd-430d-8df3-9e0675a9a7a0.png", alt: "Client 4" },
-  { src: "/lovable-uploads/2ae0e69e-ecbe-4f74-aedd-6a44808a3664.png", alt: "Client 5" },
-  { src: "/lovable-uploads/42e582af-f809-4f7f-86a7-6bceebf8a973.png", alt: "Client 6" },
-  { src: "/lovable-uploads/4c333c1e-99b1-4d6b-96fd-3cb5ef5d5f83.png", alt: "Client 7" },
-  { src: "/lovable-uploads/4c537e3a-df75-43f1-99f4-644737922e70.png", alt: "Client 8" },
-  { src: "/lovable-uploads/76e19e5c-ae3d-4ec6-81a9-2d40deb1c69a.png", alt: "Client 9" },
-  { src: "/lovable-uploads/7806e948-dad2-4255-b973-64a352c4a0df.png", alt: "Client 10" }
+  { src: "/lovable-uploads/47ae2f5c-472d-45f5-b134-8529c5fc6772.png", alt: "Honda" },
+  { src: "/lovable-uploads/a5c2d0d3-01b5-4238-9d2e-99781995f5ba.png", alt: "IMI" },
+  { src: "/lovable-uploads/368433e9-6e5e-4e2f-a272-b43aeb2feff6.png", alt: "ShaperStar" },
+  { src: "/lovable-uploads/34483fd6-7f00-48d6-a910-432eaadc4e6f.png", alt: "The Rosedale Team" },
+  { src: "/lovable-uploads/b825b2ce-543e-48a3-9502-51e9b50c8182.png", alt: "Mile High" },
+  { src: "/lovable-uploads/a69baadf-1cb9-43f2-a4e2-0e6c99082e23.png", alt: "Mekenova" },
+  { src: "/lovable-uploads/10539182-6677-4494-9a5c-b21eeb9eada9.png", alt: "JRC" },
+  { src: "/lovable-uploads/28e6a8ba-fbac-4f01-8364-ed806714ab33.png", alt: "Client 8" },
+  { src: "/lovable-uploads/1b942394-eaf9-496e-9ef4-0e2b97ec65ae.png", alt: "Client 9" }
 ];
 
 const ClientLogos = () => {

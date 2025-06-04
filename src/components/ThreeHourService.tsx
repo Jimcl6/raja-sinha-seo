@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -18,26 +17,24 @@ const ThreeHourService = () => {
             </div>
           </div>
           <p className="font-feature italic text-xl text-gray-700 max-w-3xl mx-auto">
-            Get a Full Expert Diagnosis that shows you exactly<br />
-            what's working, what's not, and what to fix — fast.
+            Simply find out what's working and what's not.
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 items-center">
           <div className="w-full lg:w-1/2 space-y-6">
             <p className="text-lg text-gray-600">
-              Whether you have an in-house SEO team or you're just starting out, this is your chance to get an honest, 
-              technical, and practical third-party review of your website's performance.
+              Get a Realistic Review.
             </p>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">In just a few hours, you'll know:</h3>
               <ul className="space-y-3">
                 {[
-                  "Where your website is holding back your business",
-                  "What to improve for better traffic, visibility, and engagement",
-                  "What your current team (or agency) may have missed",
-                  "If you're on the right track — or drifting from your goals"
+                  "What's holding you back",
+                  "What to improve",
+                  "If any opportunities are being missed",
+                  "If you're on the right track."
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-black mr-2 mt-1 flex-shrink-0" />

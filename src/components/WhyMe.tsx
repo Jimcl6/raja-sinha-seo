@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Briefcase, MessageSquareText, Award, FileSearch, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -19,8 +18,8 @@ const WhyMe = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Why Work With <span className="gradient-text">Me?</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+            Why Work With Me?
           </h2>
           <p className="text-xl font-feature italic text-gray-800 mb-4 font-bold">
             I don't just think like an SEO — I think like a business owner.

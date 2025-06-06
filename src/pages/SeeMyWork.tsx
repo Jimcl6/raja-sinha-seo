@@ -116,9 +116,10 @@ const SeeMyWork = () => {
                     {study.flags.map((flag, index) => (
                       <div 
                         key={index}
-                        className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-md"
+                        className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-md flex items-center justify-center"
+                        style={{ fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif' }}
                       >
-                        <span className="text-lg">{flag}</span>
+                        <span className="text-2xl leading-none" style={{ fontSize: '20px' }}>{flag}</span>
                       </div>
                     ))}
                   </div>

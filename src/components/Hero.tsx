@@ -15,8 +15,8 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-2 lg:gap-4">
-          <div className="w-full lg:w-1/2 lg:pr-2 space-y-6 text-center lg:text-left">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16 max-w-6xl mx-auto">
+          <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight fade-in">
               <span className="block">SEO using a</span>
               <span className="gradient-text">Business Owner's Mindset.</span>
@@ -48,8 +48,8 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center lg:justify-start">
-            <div className="relative w-64 h-64 md:w-[320px] md:h-[320px] lg:w-[640px] lg:h-[320px] shadow-xl">
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
+            <div className="relative w-64 h-64 md:w-[320px] md:h-[320px] lg:w-[480px] lg:h-[320px] shadow-xl">
               <img 
                 src={isMobile ? "/lovable-uploads/4fd4f384-f1e3-43cf-a4d6-47d63f82355d.png" : "/lovable-uploads/17c4546a-e074-47c2-ae56-740cfb1b308e.png"}
                 alt="Raja Sinha" 

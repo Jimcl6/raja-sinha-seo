@@ -1,16 +1,33 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from '@/components/ui/drawer';
 
 const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [isOpen, setIsOpen] = useState(false);
   
   const isActive = (path: string) => {
     if (path === '/#contact' && location.hash === '#contact') return true;
     return currentPath === path;
   };
+
+  const navigationItems = [
+    { to: '/services', label: 'Services' },
+    { to: '/work', label: 'See My Work' },
+    { to: '/about', label: 'About' },
+    { to: '/contact', label: 'Contact' },
+  ];
 
   return (
     <header className="bg-white py-4 shadow-sm sticky top-0 z-50">
@@ -27,39 +44,72 @@ const Header = () => {
           </div>
           
           <div className="flex items-center space-x-4">
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <Link 
-                to="/services" 
-                className={`transition-colors font-bold ${isActive('/services') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
-              >
-                Services
-              </Link>
-              <Link 
-                to="/work" 
-                className={`transition-colors font-bold ${isActive('/work') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
-              >
-                See My Work
-              </Link>
-              <Link 
-                to="/about" 
-                className={`transition-colors font-bold ${isActive('/about') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
-              >
-                About
-              </Link>
-              <Link 
-                to="/contact" 
-                className={`transition-colors font-bold ${isActive('/contact') ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
-              >
-                Contact
-              </Link>
+              {navigationItems.map((item) => (
+                <Link 
+                  key={item.to}
+                  to={item.to} 
+                  className={`transition-colors font-bold ${isActive(item.to) ? 'text-yellow-500 font-bold' : 'text-gray-600 hover:text-yellow-500'}`}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
             
+            {/* Desktop Book a Call Button */}
             <Button 
-              className="bg-yellow-500 hover:bg-yellow-600 text-white"
+              className="hidden md:block bg-yellow-500 hover:bg-yellow-600 text-white"
               onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
             >
               Book a Call
             </Button>
+
+            {/* Mobile Menu */}
+            <div className="md:hidden">
+              <Drawer open={isOpen} onOpenChange={setIsOpen}>
+                <DrawerTrigger asChild>
+                  <Button variant="ghost" size="sm" className="p-2">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <DrawerHeader className="text-left">
+                    <div className="flex items-center justify-between">
+                      <DrawerTitle>Menu</DrawerTitle>
+                      <DrawerClose asChild>
+                        <Button variant="ghost" size="sm" className="p-2">
+                          <X className="h-5 w-5" />
+                        </Button>
+                      </DrawerClose>
+                    </div>
+                  </DrawerHeader>
+                  <div className="px-4 pb-6 space-y-4">
+                    {navigationItems.map((item) => (
+                      <Link 
+                        key={item.to}
+                        to={item.to} 
+                        className={`block py-3 px-2 text-lg transition-colors ${isActive(item.to) ? 'text-yellow-500 font-bold' : 'text-gray-600'}`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                    <div className="pt-4">
+                      <Button 
+                        className="w-full bg-yellow-500 hover:bg-yellow-600 text-white"
+                        onClick={() => {
+                          window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank');
+                          setIsOpen(false);
+                        }}
+                      >
+                        Book a Call
+                      </Button>
+                    </div>
+                  </div>
+                </DrawerContent>
+              </Drawer>
+            </div>
           </div>
         </div>
       </div>

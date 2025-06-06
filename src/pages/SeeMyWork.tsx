@@ -51,7 +51,7 @@ const SeeMyWork = () => {
       challenge: "Competitors were hijacking the client's brand name in both paid search and organic results. When users searched for the client's brand name, they would often see competitor results instead.",
       solution: "I developed a comprehensive brand protection strategy that involved generating high-authority content across multiple platforms. We created and optimized numerous pages that mentioned their brand name and linked back to their main website, effectively creating a protective shield around their brand in search results.",
       results: "We successfully dominated search results with approximately 100 pages of brand-related content. For at least the first 10 pages of Google results when searching their brand name, users would see nothing but content related to their brand. This was accomplished through strategic content collaboration and link building, resulting in a highly satisfied client.",
-      image: "/lovable-uploads/57b027fb-50e3-4ee9-a558-f9ee7d926667.png"
+      image: "/lovable-uploads/83d1e8eb-37ea-4374-bbc2-c653d03a1276.png"
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ const SeeMyWork = () => {
       challenge: "While white-labeling their campaigns, we encountered significant communication gaps between our client and their clients. Misunderstandings and misconceptions threatened to make the process unnecessarily complicated.",
       solution: "After recognizing that the white-label approach was causing inefficiencies, I consulted with my client to position me as a manager within their company. This allowed me to work directly with their customers, eliminating the communication barriers.",
       results: "We successfully ranked their clients in the competitive UK market, serving both B2B and B2C customers effectively. The streamlined communication process and quality results led to rapid growth, with the agency scaling from 1-2 clients to managing 50 campaigns in less than two weeks.",
-      image: "/lovable-uploads/533a35a0-e5db-4b41-82f9-ecea43483e5c.png"
+      image: "/lovable-uploads/d3b11df3-bea9-4a11-b789-2b5f72677000.png"
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ const SeeMyWork = () => {
       challenge: "Real estate search was increasingly dominated by aggregator websites like Zillow, Redfin, and Movato, making it difficult for individual real estate clients to rank well in search results.",
       solution: "We developed a strategy focusing on niche keywords and search patterns that aggregator sites weren't effectively addressing. Instead of competing head-on with high-competition keywords, we identified underserved search intent opportunities.",
       results: "By sidestepping the most competitive keywords and focusing on low to medium competition long-tail keywords with higher transactional intent, we achieved strong rankings that delivered better conversion rates than the broader terms our clients were previously targeting.",
-      image: "/lovable-uploads/4c537e3a-df75-43f1-99f4-644737922e70.png"
+      image: "/lovable-uploads/cf71bcdf-c05b-4e57-9567-01245e3c6a04.png"
     }
   ];
 

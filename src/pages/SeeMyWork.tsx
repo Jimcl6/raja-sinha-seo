@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -83,6 +82,23 @@ const SeeMyWork = () => {
     }
   ];
 
+  const getFlagEmojis = (studyId: number) => {
+    switch (studyId) {
+      case 1: // Luxury Real Estate Brokerage
+      case 2: // High End Criminal Defense Attorney
+      case 6: // Digital Marketing Agency
+        return "🇺🇸";
+      case 3: // Start-up Company in Philippines
+        return "🇵🇭";
+      case 4: // Logistics Company in Southeast Asia
+        return ["🇮🇩", "🇹🇭"];
+      case 5: // SEO Agency in the UK
+        return "🇬🇧";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -123,7 +139,29 @@ const SeeMyWork = () => {
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl">{study.title}</CardTitle>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-2xl flex-1">{study.title}</CardTitle>
+                    <div className="md:hidden flex gap-1 ml-2">
+                      {Array.isArray(getFlagEmojis(study.id)) ? (
+                        (getFlagEmojis(study.id) as string[]).map((flag, flagIndex) => (
+                          <div 
+                            key={flagIndex}
+                            className="bg-gray-100 rounded-full p-1.5 shadow-sm flex items-center justify-center"
+                            style={{ fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif' }}
+                          >
+                            <span className="text-lg leading-none" style={{ fontSize: '16px' }}>{flag}</span>
+                          </div>
+                        ))
+                      ) : (
+                        <div 
+                          className="bg-gray-100 rounded-full p-1.5 shadow-sm flex items-center justify-center"
+                          style={{ fontFamily: '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif' }}
+                        >
+                          <span className="text-lg leading-none" style={{ fontSize: '16px' }}>{getFlagEmojis(study.id)}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                   <CardDescription className="text-lg text-yellow-600 font-medium font-feature">{study.subtitle}</CardDescription>
                 </CardHeader>
                 <CardContent>

@@ -90,22 +90,20 @@ const SeeMyWork = () => {
         {/* Hero Section */}
         <div className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">My Work</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              My Work
+            </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-              Explore how I discover my clients' struggles and obstacles through meaningful conversation,
-              understand their traffic challenges, and deliver tailored solutions with measurable results.
+              Explore how I discover my clients' struggles and obstacles to find solutions.
             </p>
           </div>
         </div>
         
-        {/* Added Client Logos Section */}
-        <ClientLogos />
-        
         {/* Case Studies */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {caseStudies.map((study) => (
-              <Card key={study.id} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
+            {caseStudies.map((study, index) => (
+              <Card key={study.id} className={`overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow ${index % 2 === 1 ? 'bg-gray-50' : 'bg-white'}`}>
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={study.image} 
@@ -152,6 +150,9 @@ const SeeMyWork = () => {
             ))}
           </div>
         </div>
+        
+        {/* Client Logos Section moved here before footer */}
+        <ClientLogos />
       </main>
       <Footer />
     </div>

@@ -23,7 +23,7 @@ const SeeMyWork = () => {
       challenge: "Client's keywords were stuck in Pages 2-5 for desired keywords, limiting their visibility in a competitive market.",
       solution: "We identified that the problem was primarily in their technical SEO implementation. Several basic SEO requirements were not properly addressed.",
       results: "Within just 2 months, most of their keywords moved to Page 1, with their primary keywords reaching the coveted Position 1 on Page 1.",
-      image: "/lovable-uploads/b60fe8f2-5d01-4a88-8774-0877f9d5ea5b.png",
+      image: "/lovable-uploads/078a2702-03a7-43dd-ae6a-6e52c5808636.png",
       flags: ["🇺🇸"]
     },
     {
@@ -34,7 +34,7 @@ const SeeMyWork = () => {
       challenge: "The client had no website and zero online traffic, making it difficult to attract potential clients in a competitive legal market.",
       solution: "We created a website designed to appeal to both the attorney and their target clients. We carefully analyzed and categorized keywords based on search volume and user intent, separating them into primary and secondary targets.",
       results: "In just 3 months, the site reached Page 3, and by 5 months we secured Page 1 rankings. When Google Maps reduced local results from 7 to 3, we pivoted to focus on local Maps optimization, securing top 3 positions for all desired keywords. We also reduced bounce rates and increased conversion on 'Free Consultation' buttons, generating more clients than ever before.",
-      image: "/lovable-uploads/97c9ba40-ebd2-44ab-ba37-793bbf896e72.png",
+      image: "/lovable-uploads/d54e912f-7295-4f90-9232-adc64e2c1ec7.png",
       flags: ["🇺🇸"]
     },
     {
@@ -45,7 +45,7 @@ const SeeMyWork = () => {
       challenge: "The company had minimal website traffic (<110 visits monthly) and needed help with their entire business model including web technology for hike schedules, bookings, and online payments with minimal manual intervention.",
       solution: "We conducted a complete analysis of their website, business model, marketing strategy, and administration processes. Our team built a new website with significant input from our creative team for both frontend and backend design.",
       results: "We successfully ranked them for the top 40 most hiked mountains in the Philippines, all on Page 1 (Ranks 1-5). Their customer base grew rapidly, which attracted hiking gear sponsors to their website, creating additional revenue streams.",
-      image: "/lovable-uploads/d52a5ab2-ecec-4da2-90a5-6089cec94b1f.png",
+      image: "/lovable-uploads/9453b3f9-b16b-4e9c-b304-a85dce8e6b11.png",
       flags: ["🇵🇭"]
     },
     {
@@ -56,7 +56,7 @@ const SeeMyWork = () => {
       challenge: "Competitors were hijacking the client's brand name in both paid search and organic results. When users searched for the client's brand name, they would often see competitor results instead.",
       solution: "I developed a comprehensive brand protection strategy that involved generating high-authority content across multiple platforms. We created and optimized numerous pages that mentioned their brand name and linked back to their main website, effectively creating a protective shield around their brand in search results.",
       results: "We successfully dominated search results with approximately 100 pages of brand-related content. For at least the first 10 pages of Google results when searching their brand name, users would see nothing but content related to their brand. This was accomplished through strategic content collaboration and link building, resulting in a highly satisfied client.",
-      image: "/lovable-uploads/83d1e8eb-37ea-4374-bbc2-c653d03a1276.png",
+      image: "/lovable-uploads/3606dfff-d6b0-4c84-9144-4076d4d4bc2f.png",
       flags: ["🇮🇩", "🇹🇭"]
     },
     {
@@ -67,7 +67,7 @@ const SeeMyWork = () => {
       challenge: "While white-labeling their campaigns, we encountered significant communication gaps between our client and their clients. Misunderstandings and misconceptions threatened to make the process unnecessarily complicated.",
       solution: "After recognizing that the white-label approach was causing inefficiencies, I consulted with my client to position me as a manager within their company. This allowed me to work directly with their customers, eliminating the communication barriers.",
       results: "We successfully ranked their clients in the competitive UK market, serving both B2B and B2C customers effectively. The streamlined communication process and quality results led to rapid growth, with the agency scaling from 1-2 clients to managing 50 campaigns in less than two weeks.",
-      image: "/lovable-uploads/d3b11df3-bea9-4a11-b789-2b5f72677000.png",
+      image: "/lovable-uploads/cd3e4d9e-be52-44d8-b487-b48239d827a7.png",
       flags: ["🇬🇧"]
     },
     {
@@ -78,7 +78,7 @@ const SeeMyWork = () => {
       challenge: "Real estate search was increasingly dominated by aggregator websites like Zillow, Redfin, and Movato, making it difficult for individual real estate clients to rank well in search results.",
       solution: "We developed a strategy focusing on niche keywords and search patterns that aggregator sites weren't effectively addressing. Instead of competing head-on with high-competition keywords, we identified underserved search intent opportunities.",
       results: "By sidestepping the most competitive keywords and focusing on low to medium competition long-tail keywords with higher transactional intent, we achieved strong rankings that delivered better conversion rates than the broader terms our clients were previously targeting.",
-      image: "/lovable-uploads/cf71bcdf-c05b-4e57-9567-01245e3c6a04.png",
+      image: "/lovable-uploads/da6444c0-a85e-4f87-be77-01a20742b407.png",
       flags: ["🇺🇸"]
     }
   ];

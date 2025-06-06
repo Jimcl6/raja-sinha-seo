@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -22,7 +21,7 @@ const SeeMyWork = () => {
       challenge: "Client's keywords were stuck in Pages 2-5 for desired keywords, limiting their visibility in a competitive market.",
       solution: "We identified that the problem was primarily in their technical SEO implementation. Several basic SEO requirements were not properly addressed.",
       results: "Within just 2 months, most of their keywords moved to Page 1, with their primary keywords reaching the coveted Position 1 on Page 1.",
-      image: "/lovable-uploads/d99b57ad-f414-4fe6-96c1-7ce95c64cafa.png"
+      image: "/lovable-uploads/b60fe8f2-5d01-4a88-8774-0877f9d5ea5b.png"
     },
     {
       id: 2,
@@ -32,7 +31,7 @@ const SeeMyWork = () => {
       challenge: "The client had no website and zero online traffic, making it difficult to attract potential clients in a competitive legal market.",
       solution: "We created a website designed to appeal to both the attorney and their target clients. We carefully analyzed and categorized keywords based on search volume and user intent, separating them into primary and secondary targets.",
       results: "In just 3 months, the site reached Page 3, and by 5 months we secured Page 1 rankings. When Google Maps reduced local results from 7 to 3, we pivoted to focus on local Maps optimization, securing top 3 positions for all desired keywords. We also reduced bounce rates and increased conversion on 'Free Consultation' buttons, generating more clients than ever before.",
-      image: "/lovable-uploads/7c92d583-54d0-4eb5-8bb2-cbdc4c147313.png"
+      image: "/lovable-uploads/97c9ba40-ebd2-44ab-ba37-793bbf896e72.png"
     },
     {
       id: 3,
@@ -42,7 +41,7 @@ const SeeMyWork = () => {
       challenge: "The company had minimal website traffic (<110 visits monthly) and needed help with their entire business model including web technology for hike schedules, bookings, and online payments with minimal manual intervention.",
       solution: "We conducted a complete analysis of their website, business model, marketing strategy, and administration processes. Our team built a new website with significant input from our creative team for both frontend and backend design.",
       results: "We successfully ranked them for the top 40 most hiked mountains in the Philippines, all on Page 1 (Ranks 1-5). Their customer base grew rapidly, which attracted hiking gear sponsors to their website, creating additional revenue streams.",
-      image: "/lovable-uploads/7532a2f8-b4e4-437a-80c4-28235766761e.png"
+      image: "/lovable-uploads/d52a5ab2-ecec-4da2-90a5-6089cec94b1f.png"
     },
     {
       id: 4,

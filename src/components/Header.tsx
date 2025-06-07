@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
@@ -36,7 +35,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/29761aa9-0e88-4290-bdfb-381035071968.png" 
+                src="/lovable-uploads/5ea56857-32d5-467c-b5d7-1ec7a2a4860c.png" 
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-10 md:h-12 lg:h-14" 
               />

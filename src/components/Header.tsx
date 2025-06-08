@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import {
   Drawer,
   DrawerClose,
@@ -16,6 +17,7 @@ const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   const isActive = (path: string) => {
     if (path === '/#contact' && location.hash === '#contact') return true;
@@ -36,7 +38,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/5ea56857-32d5-467c-b5d7-1ec7a2a4860c.png" 
+                src={isMobile ? "/lovable-uploads/002cffda-7fae-4952-a090-268444da62c4.png" : "/lovable-uploads/5ea56857-32d5-467c-b5d7-1ec7a2a4860c.png"}
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-12 md:h-12 lg:h-14" 
               />
@@ -70,7 +72,7 @@ const Header = () => {
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
                   <Button variant="ghost" size="sm" className="p-2">
-                    <Menu className="h-10 w-10" />
+                    <Menu className="h-14 w-14" />
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent>

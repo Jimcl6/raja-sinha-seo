@@ -9,13 +9,13 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="relative overflow-hidden bg-white pt-4 pb-8 md:pt-20 md:pb-12">
+    <div className="relative overflow-hidden bg-white pt-2 pb-8 md:pt-20 md:pb-12">
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="h-full w-full bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:20px_20px]"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16 max-w-6xl mx-auto">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-4 lg:gap-16 max-w-6xl mx-auto">
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight fade-in">
               <span className="block">SEO using a</span>
@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
+          <div className="w-full lg:w-1/2 mb-4 lg:mb-0 flex justify-center">
             <div className="relative w-64 h-[350px] md:w-[320px] md:h-[320px] lg:w-[480px] lg:h-[320px] shadow-xl">
               <img 
                 src={isMobile ? "/lovable-uploads/8c22136c-7fb9-4537-a05b-f1d7185a3df1.png" : "/lovable-uploads/ae6cae7a-3332-4915-afe7-e418c30665da.png"}

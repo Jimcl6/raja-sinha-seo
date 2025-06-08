@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const ServicesHero = () => {
   return (
@@ -11,36 +10,27 @@ const ServicesHero = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col-reverse lg:flex-row items-center">
-          <div className="w-full lg:w-1/2 lg:pr-10 text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight fade-in mb-6">
-              <span className="gradient-text">Services</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-3xl mx-auto lg:mx-0 slide-up mb-8">
-              Strategic SEO services designed to grow your business with measurable results. 
-              No fluff, no guesswork — just expert-level optimization that actually works.
-            </p>
-            
-            <Button 
-              size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6"
-              onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
-            >
-              Book a Free Strategy Call
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight fade-in mb-8">
+            <span className="gradient-text">Services</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-700 mb-8">
+            This is how I help my clients
+          </p>
+          
+          <div className="flex justify-center mb-12">
+            <div className="animate-bounce">
+              <ArrowDown className="h-8 w-8 text-yellow-600" />
+            </div>
           </div>
           
-          <div className="w-full lg:w-1/2 mb-10 lg:mb-0 flex justify-center lg:justify-end">
-            <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-[#f0f0f0] w-full max-w-md aspect-[2/1]">
-              <img 
-                src="/lovable-uploads/abbcf8c7-c8ec-4d84-8e6c-8c8a8975ec9a.png" 
-                alt="Raja Sinha SEO Consultancy" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#f0f0f0]/20 to-transparent pointer-events-none"></div>
-            </div>
+          <div className="w-full max-w-2xl mx-auto aspect-video rounded-lg overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1000&q=80" 
+              alt="Professional SEO Services" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

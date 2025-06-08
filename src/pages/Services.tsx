@@ -2,10 +2,8 @@
 import React from 'react';
 import Header from '@/components/Header';
 import ServicesHero from '@/components/ServicesHero';
-import ClientLogos from '@/components/ClientLogos';
-import ServicesAudit from '@/components/ServicesAudit';
-import ServicesALaCarte from '@/components/ServicesALaCarte';
-import ServicesScaling from '@/components/ServicesScaling';
+import ServicesList from '@/components/ServicesList';
+import OffshoreStaffing from '@/components/OffshoreStaffing';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 
@@ -15,10 +13,8 @@ const Services = () => {
       <Header />
       <main className="flex-grow">
         <ServicesHero />
-        <ClientLogos />
-        <ServicesAudit />
-        <ServicesALaCarte />
-        <ServicesScaling />
+        <ServicesList />
+        <OffshoreStaffing />
         <ContactCTA />
       </main>
       <Footer />

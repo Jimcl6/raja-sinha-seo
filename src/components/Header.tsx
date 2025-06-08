@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
@@ -29,7 +30,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white py-4 shadow-sm sticky top-0 z-50">
+    <header className="bg-white py-6 md:py-4 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -68,8 +69,8 @@ const Header = () => {
             <div className="md:hidden">
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
-                  <Button variant="ghost" size="sm" className="p-2">
-                    <Menu className="h-5 w-5" />
+                  <Button variant="ghost" size="sm" className="p-3">
+                    <Menu className="h-7 w-7" />
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent>

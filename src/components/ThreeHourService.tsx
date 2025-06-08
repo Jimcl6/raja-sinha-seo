@@ -11,7 +11,7 @@ const ThreeHourService = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Understand what's going on! — in <span className="text-yellow-500">Just 3 Hours</span>
+              Understand what's going on with your site! — in <span className="text-yellow-500">Just 3 Hours</span>
             </h2>
             <div className="ml-3 h-10 w-10 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center animate-pulse">
               <Clock className="h-6 w-6" />

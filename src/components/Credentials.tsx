@@ -1,18 +1,16 @@
-
 import React from 'react';
 import { CheckCircle2, Award, TrendingUp, Globe2 } from 'lucide-react';
 
 const Credentials = () => {
   return (
     <div className="relative py-16 overflow-hidden">
-      {/* Background image with overlay */}
+      {/* Background image without overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/lovable-uploads/ff650090-8b4f-448e-9ad3-b1ce320f3b1b.png" 
           alt="Credentials background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-yellow-500/80 mix-blend-multiply"></div>
       </div>
       
       {/* Top border */}

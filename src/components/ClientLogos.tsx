@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { 
   Carousel, 
@@ -10,15 +11,15 @@ import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const clientLogos = [
-  { src: "/lovable-uploads/47ae2f5c-472d-45f5-b134-8529c5fc6772.png", alt: "Honda" },
-  { src: "/lovable-uploads/a5c2d0d3-01b5-4238-9d2e-99781995f5ba.png", alt: "IMI" },
-  { src: "/lovable-uploads/368433e9-6e5e-4e2f-a272-b43aeb2feff6.png", alt: "ShaperStar" },
-  { src: "/lovable-uploads/34483fd6-7f00-48d6-a910-432eaadc4e6f.png", alt: "The Rosedale Team" },
-  { src: "/lovable-uploads/b825b2ce-543e-48a3-9502-51e9b50c8182.png", alt: "Mile High" },
-  { src: "/lovable-uploads/a69baadf-1cb9-43f2-a4e2-0e6c99082e23.png", alt: "Mekenova" },
-  { src: "/lovable-uploads/10539182-6677-4494-9a5c-b21eeb9eada9.png", alt: "JRC" },
-  { src: "/lovable-uploads/28e6a8ba-fbac-4f01-8364-ed806714ab33.png", alt: "Client 8" },
-  { src: "/lovable-uploads/1b942394-eaf9-496e-9ef4-0e2b97ec65ae.png", alt: "Client 9" }
+  { src: "/lovable-uploads/e5740d79-672f-4cfb-9366-b006b90c6f0a.png", alt: "Shapiro & Sher Group" },
+  { src: "/lovable-uploads/fc6dad23-c749-4dfc-bf78-22b32c68704c.png", alt: "Goodman Law Group" },
+  { src: "/lovable-uploads/a0cc15c1-866e-48b0-9b7c-08d29c751470.png", alt: "Carney" },
+  { src: "/lovable-uploads/8cab9c68-16f3-4d1d-943e-eec98ac9507e.png", alt: "Mile High Home Pro" },
+  { src: "/lovable-uploads/3bac511d-43f2-40ab-abc2-f90d6bf2e436.png", alt: "Bannister Transport" },
+  { src: "/lovable-uploads/aa4ad88f-197d-4086-9d37-b8fd86851927.png", alt: "Honda Power Products" },
+  { src: "/lovable-uploads/ee12c5c1-d1b9-40a0-a965-ccd696d3815c.png", alt: "The Brooks Team" },
+  { src: "/lovable-uploads/1b5f7b1b-ec2a-4600-9cbb-766d8fe384e4.png", alt: "CAD" },
+  { src: "/lovable-uploads/c5c0e4c3-7a5a-4a62-93d7-70276685d910.png", alt: "IMI" }
 ];
 
 const ClientLogos = () => {
@@ -52,7 +53,7 @@ const ClientLogos = () => {
     <div className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <h3 className="text-center text-xl md:text-2xl font-semibold text-gray-800 mb-6">
-          Trusted by Leading Brands
+          Who I have Worked With
         </h3>
         
         <Carousel

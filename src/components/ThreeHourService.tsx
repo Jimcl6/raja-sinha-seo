@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -64,11 +65,16 @@ const ThreeHourService = () => {
           
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-xl shadow-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/706cfdb8-5287-4b23-93ea-7242119fe196.png" 
-                alt="Raja Sinha" 
+              <video 
+                src="/lovable-uploads/706cfdb8-5287-4b23-93ea-7242119fe196.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="h-full w-full object-cover"
-              />
+              >
+                Your browser does not support the video tag.
+              </video>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8 bg-black/40 rounded-xl backdrop-blur-sm">
                   <div className="text-6xl font-bold text-white">3</div>

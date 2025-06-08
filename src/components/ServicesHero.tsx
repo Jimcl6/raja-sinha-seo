@@ -19,7 +19,7 @@ const ServicesHero = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-700 mb-8">
-                This is how I help my clients
+                For more than 15 years I have had nothing but the pleasure of working with people across continents. Scroll to know more.
               </p>
               
               <div className="flex justify-center lg:justify-start mb-8">
@@ -33,7 +33,7 @@ const ServicesHero = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="w-full max-w-md aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" 
+                  src="/lovable-uploads/0895bd47-f1dd-414a-8399-50741dbb6089.png" 
                   alt="Professional headshot" 
                   className="w-full h-full object-cover"
                 />

@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 
 const ServicesHero = () => {
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-20 md:pt-24 md:pb-28">
+    <div className="relative overflow-hidden bg-white pt-8 pb-10 md:pt-12 md:pb-14">
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="h-full w-full bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:20px_20px]"></div>
       </div>

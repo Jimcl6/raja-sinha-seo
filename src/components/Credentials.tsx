@@ -10,7 +10,7 @@ const Credentials = () => {
         <img 
           src="/lovable-uploads/5d5a7b63-e3d3-4736-bb67-d4d78c04ea39.png" 
           alt="My Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover blur-sm"
         />
       </div>
       

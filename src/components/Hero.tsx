@@ -32,12 +32,7 @@ const Hero = () => {
               </p>
             </div>
             
-            {/* Client Logos section moved here with reduced spacing */}
-            <div className="py-2">
-              <ClientLogos />
-            </div>
-            
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-2 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
                 className="bg-yellow-500 hover:bg-yellow-600 text-black px-6"
@@ -63,6 +58,11 @@ const Hero = () => {
               />
             </div>
           </div>
+        </div>
+        
+        {/* Client Logos section moved back below for desktop */}
+        <div className="pt-8">
+          <ClientLogos />
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-8 md:pt-20 md:pb-12">
+    <div className="relative overflow-hidden bg-white pt-4 pb-8 md:pt-20 md:pb-12">
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="h-full w-full bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:20px_20px]"></div>
       </div>
@@ -49,9 +49,9 @@ const Hero = () => {
           </div>
           
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
-            <div className="relative w-64 h-64 md:w-[320px] md:h-[320px] lg:w-[480px] lg:h-[320px] shadow-xl">
+            <div className="relative w-64 h-[350px] md:w-[320px] md:h-[320px] lg:w-[480px] lg:h-[320px] shadow-xl">
               <img 
-                src={isMobile ? "/lovable-uploads/887c0aec-a16a-459a-bddd-0dced4580685.png" : "/lovable-uploads/ae6cae7a-3332-4915-afe7-e418c30665da.png"}
+                src={isMobile ? "/lovable-uploads/8c22136c-7fb9-4537-a05b-f1d7185a3df1.png" : "/lovable-uploads/ae6cae7a-3332-4915-afe7-e418c30665da.png"}
                 alt="Raja Sinha" 
                 className="w-full h-full object-cover object-center"
               />

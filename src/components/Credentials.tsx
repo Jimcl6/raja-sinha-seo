@@ -8,11 +8,10 @@ const Credentials = () => {
       {/* Background image - mobile */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img 
-          src="/lovable-uploads/ac8f2cbd-04d3-48e0-a8ff-61232f06fd01.png" 
-          alt="Credentials background" 
+          src="/lovable-uploads/5d5a7b63-e3d3-4736-bb67-d4d78c04ea39.png" 
+          alt="My Background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-yellow-500/20"></div>
       </div>
       
       {/* Background image - desktop */}
@@ -29,8 +28,8 @@ const Credentials = () => {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-500 z-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-          Credentials You Can Trust
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:text-white">
+          <span className="gradient-text md:text-white">My Background</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

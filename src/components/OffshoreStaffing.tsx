@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Users, Palette, Code, Zap } from 'lucide-react';
+import { Users, Palette, Code, Zap, Video, Brain } from 'lucide-react';
 
 const OffshoreStaffing = () => {
   const staffingServices = [
@@ -22,6 +22,16 @@ const OffshoreStaffing = () => {
       icon: Code
     },
     {
+      title: "Video Editing",
+      description: "Professional video editing services for your marketing and content needs.",
+      icon: Video
+    },
+    {
+      title: "AI Prompting Specialists",
+      description: "Experts in AI prompting and optimization for various AI tools and applications.",
+      icon: Brain
+    },
+    {
       title: "Technical Support",
       description: "Comprehensive technical support for your digital marketing and development needs.",
       icon: Zap
@@ -34,7 +44,7 @@ const OffshoreStaffing = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Remote & Offshore Staffing Solutions
+              <span className="gradient-text">Remote & Offshore Staffing Solutions</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Build your own dedicated team in the Philippines with skilled professionals 

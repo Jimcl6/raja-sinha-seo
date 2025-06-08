@@ -11,23 +11,19 @@ const ThreeHourService = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Fix, Repair & Improve Your Website — in <span className="text-yellow-500">Just 3 Hours</span>
+              Understand what's going on! — in <span className="text-yellow-500">Just 3 Hours</span>
             </h2>
             <div className="ml-3 h-10 w-10 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center animate-pulse">
               <Clock className="h-6 w-6" />
             </div>
           </div>
-          <p className="font-feature italic text-xl text-gray-700 max-w-3xl mx-auto">
-            Simply find out what's working and what's not.
+          <p className="font-feature italic text-xl bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent max-w-3xl mx-auto">
+            Get a Realistic Review.
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 items-center">
           <div className="w-full lg:w-1/2 space-y-6">
-            <p className="text-lg text-gray-600">
-              Get a Realistic Review.
-            </p>
-            
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">In just a few hours, you'll know:</h3>
               <ul className="space-y-3">

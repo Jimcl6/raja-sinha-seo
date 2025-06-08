@@ -86,22 +86,6 @@ const WhyMe = () => {
             </div>
           </div>
         </div>
-        
-        <div className="mt-16 text-center">
-          <div className="bg-white/95 p-8 md:p-10 rounded-lg shadow-lg border border-gray-200 max-w-3xl mx-auto">
-            <p className="text-lg md:text-xl font-medium mb-6 font-feature italic text-gray-800">
-              If you're done with vague SEO talk and want someone who's helped hundreds of SEO campaigns grow real traffic — 
-              let's talk. I'll show you what's possible for your business and how to get there.
-            </p>
-            <Button 
-              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-6 text-lg font-semibold"
-              onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
-            >
-              Schedule Your Free Strategy Call
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );

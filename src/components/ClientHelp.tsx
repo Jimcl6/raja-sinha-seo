@@ -8,7 +8,7 @@ const ClientHelp = () => {
     <div className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text">
             Who I Help
           </h2>
           <p className="text-lg font-feature italic text-gray-600">
@@ -86,7 +86,7 @@ const ClientHelp = () => {
           </Card>
           
           {/* Client Type 3 */}
-          <Card className="border-l-4 border-l-gray-500 shadow-md hover:shadow-lg transition-all">
+          <Card className="border-l-4 border-l-gray-300 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
               <div className="h-64 w-full mb-4 overflow-hidden rounded-md">
                 <img 

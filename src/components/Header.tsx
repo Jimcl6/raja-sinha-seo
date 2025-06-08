@@ -72,7 +72,7 @@ const Header = () => {
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
                   <Button variant="ghost" size="sm" className="p-2">
-                    <Menu className="h-14 w-14" />
+                    <Menu className="h-21 w-21" />
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent>

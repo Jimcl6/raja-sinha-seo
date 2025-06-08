@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Instagram, Youtube, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -11,14 +12,16 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-4">
               <img 
-                src="/lovable-uploads/d2feafec-a621-4b5b-a0a8-e44d64da018b.png" 
+                src="/lovable-uploads/988f1414-1cc8-4691-b338-b848ba3f4161.png" 
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-gray-400 mb-4">
-              Providing strategic SEO services with a business owner mindset for over 15 years.
-            </p>
+            <div className="text-gray-400 mb-4">
+              <p className="mb-2">#26 Main Avenue, Windward Hills</p>
+              <p className="mb-2">Dasmarinas, Cavite 4114 Philippines</p>
+              <p>+63 961 752 1638</p>
+            </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 <Facebook className="h-5 w-5" />

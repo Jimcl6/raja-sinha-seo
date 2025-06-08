@@ -46,6 +46,19 @@ const Contact = () => {
   const onSubmit = (values: FormValues) => {
     setIsSubmitting(true);
     
+    // Create mailto link with form data
+    const subject = encodeURIComponent("Contact Form Submission");
+    const body = encodeURIComponent(`
+Name: ${values.name}
+Email: ${values.email}
+Phone: ${values.phone}
+Message: ${values.message || 'No message provided'}
+    `);
+    const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     // Simulate form submission
     setTimeout(() => {
       console.log(values);
@@ -90,8 +103,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 font-medium">Email</p>
-                    <a href="mailto:raja@RajaSinhaSEO.com" className="text-gray-900 hover:text-yellow-600 transition-colors">
-                      raja@RajaSinhaSEO.com
+                    <a href="mailto:raja@rajasinhaseo.com" className="text-gray-900 hover:text-yellow-600 transition-colors">
+                      raja@rajasinhaseo.com
                     </a>
                   </div>
                 </div>
@@ -275,8 +288,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 font-medium">Email</p>
-                  <a href="mailto:raja@RajaSinhaSEO.com" className="text-gray-900 hover:text-yellow-600 transition-colors">
-                    raja@RajaSinhaSEO.com
+                  <a href="mailto:raja@rajasinhaseo.com" className="text-gray-900 hover:text-yellow-600 transition-colors">
+                    raja@rajasinhaseo.com
                   </a>
                 </div>
               </div>

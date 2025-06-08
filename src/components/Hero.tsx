@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Link } from 'react-router-dom';
+import ClientLogos from '@/components/ClientLogos';
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -29,6 +30,11 @@ const Hero = () => {
               <p className="text-xl md:text-2xl text-yellow-600 font-bold max-w-2xl mx-auto lg:mx-0 slide-up">
                 15+ years of experience.
               </p>
+            </div>
+            
+            {/* Client Logos section moved here */}
+            <div className="py-6">
+              <ClientLogos />
             </div>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">

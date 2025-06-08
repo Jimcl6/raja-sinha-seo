@@ -40,23 +40,6 @@ const ThreeHourService = () => {
                 ))}
               </ul>
             </div>
-
-            <Card className="border-[#f0f0f0] bg-white">
-              <CardContent className="pt-6">
-                <p className="text-lg font-medium">
-                  If you need help implementing changes.
-                </p>
-                <p className="text-yellow-600 font-semibold mt-2 mb-4">
-                  I can take you further.
-                </p>
-                <Button 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-black"
-                  onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
-                >
-                  Book A Call Now
-                </Button>
-              </CardContent>
-            </Card>
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center">

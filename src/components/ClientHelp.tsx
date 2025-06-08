@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -55,7 +54,7 @@ const ClientHelp = () => {
           </Card>
           
           {/* Client Type 2 */}
-          <Card className="border-l-4 border-l-red-500 shadow-md hover:shadow-lg transition-all">
+          <Card className="border-l-4 border-l-black shadow-md hover:shadow-lg transition-all">
             <CardHeader>
               <div className="h-64 w-full mb-4 overflow-hidden rounded-md">
                 <img 
@@ -87,7 +86,7 @@ const ClientHelp = () => {
           </Card>
           
           {/* Client Type 3 */}
-          <Card className="border-l-4 border-l-green-500 shadow-md hover:shadow-lg transition-all">
+          <Card className="border-l-4 border-l-gray-500 shadow-md hover:shadow-lg transition-all">
             <CardHeader>
               <div className="h-64 w-full mb-4 overflow-hidden rounded-md">
                 <img 

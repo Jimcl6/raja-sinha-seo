@@ -25,9 +25,7 @@ const WhyMe = () => {
             I don't just think like an SEO — I think like a business owner.
           </p>
           <p className="text-lg text-gray-700">
-            My approach is rooted in understanding your business goals, your customers, and your market. 
-            I step into your shoes and look at SEO from your perspective, uncovering opportunities 
-            that align with your bottom line — not just search rankings.
+            I step into your shoes and look at SEO from your perspective, uncovering potential growth.
           </p>
         </div>
         

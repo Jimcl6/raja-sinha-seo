@@ -40,7 +40,7 @@ const Header = () => {
               <img 
                 src={isMobile ? "/lovable-uploads/002cffda-7fae-4952-a090-268444da62c4.png" : "/lovable-uploads/5ea56857-32d5-467c-b5d7-1ec7a2a4860c.png"}
                 alt="Raja Sinha SEO Consultancy" 
-                className="h-12 md:h-12 lg:h-14" 
+                className={isMobile ? "h-14" : "h-12 md:h-12 lg:h-14"}
               />
             </Link>
           </div>
@@ -72,7 +72,7 @@ const Header = () => {
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
                   <Button variant="ghost" size="sm" className="p-2">
-                    <Menu className="h-21 w-21" />
+                    <Menu className="h-8 w-8" />
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent>

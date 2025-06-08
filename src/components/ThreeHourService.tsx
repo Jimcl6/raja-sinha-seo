@@ -71,7 +71,11 @@ const ThreeHourService = () => {
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="h-full w-full object-cover"
+                onError={(e) => console.error('Video failed to load:', e)}
+                onLoadStart={() => console.log('Video loading started')}
+                onCanPlay={() => console.log('Video can play')}
               >
                 Your browser does not support the video tag.
               </video>

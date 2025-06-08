@@ -12,6 +12,7 @@ const Credentials = () => {
           alt="Credentials background" 
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-yellow-500/20"></div>
       </div>
       
       {/* Background image - desktop */}
@@ -21,6 +22,7 @@ const Credentials = () => {
           alt="Credentials background" 
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-yellow-500/20"></div>
       </div>
       
       {/* Top border */}

@@ -30,7 +30,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white py-6 md:py-4 shadow-sm sticky top-0 z-50">
+    <header className="bg-white py-8 md:py-4 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -38,7 +38,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/5ea56857-32d5-467c-b5d7-1ec7a2a4860c.png" 
                 alt="Raja Sinha SEO Consultancy" 
-                className="h-10 md:h-12 lg:h-14" 
+                className="h-12 md:h-12 lg:h-14" 
               />
             </Link>
           </div>
@@ -69,8 +69,8 @@ const Header = () => {
             <div className="md:hidden">
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
-                  <Button variant="ghost" size="sm" className="p-3">
-                    <Menu className="h-7 w-7" />
+                  <Button variant="ghost" size="sm" className="p-2">
+                    <Menu className="h-10 w-10" />
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent>

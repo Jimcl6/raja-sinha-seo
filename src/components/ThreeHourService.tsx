@@ -2,8 +2,15 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ThreeHourService = () => {
+  const navigate = useNavigate();
+
+  const handleGetYoursNow = () => {
+    navigate('/contact-form');
+  };
+
   return (
     <section className="py-16 bg-gray-900 relative overflow-hidden">
       {/* Background image */}
@@ -59,7 +66,7 @@ const ThreeHourService = () => {
             <Button 
               size="lg" 
               className="bg-white text-yellow-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold"
-              onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
+              onClick={handleGetYoursNow}
             >
               Get Yours Now
             </Button>

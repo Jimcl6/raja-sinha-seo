@@ -4,7 +4,7 @@ import { CheckCircle2, Award, TrendingUp, Globe2 } from 'lucide-react';
 
 const Credentials = () => {
   return (
-    <div className="relative py-16 overflow-hidden">
+    <div className="relative py-16 overflow-hidden bg-gray-50">
       {/* Background image - mobile */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img 
@@ -14,22 +14,12 @@ const Credentials = () => {
         />
       </div>
       
-      {/* Background image - desktop */}
-      <div className="absolute inset-0 z-0 hidden md:block">
-        <img 
-          src="/lovable-uploads/979d3dda-0bcf-4b5a-b1c6-7c6355704aa5.png" 
-          alt="Professional background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-yellow-500/20"></div>
-      </div>
-      
       {/* Top border */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-500 z-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:text-white">
-          <span className="gradient-text md:text-white">My Background</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <span className="gradient-text">My Background</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -57,7 +47,7 @@ const Credentials = () => {
               <Globe2 className="h-6 w-6" />
             </div>
             <h3 className="font-bold text-lg mb-2">Global Experience</h3>
-            <p className="text-gray-600">Worked with client in the US | UK | AUS | SE ASIAN Markets</p>
+            <p className="text-gray-600">Worked with clients in the US | UK | AUS | SE ASIAN Markets</p>
           </div>
           
           {/* Credential 4 */}

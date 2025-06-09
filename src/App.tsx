@@ -10,6 +10,7 @@ import DiagnosisRoom from "./pages/DiagnosisRoom";
 import About from "./pages/About";
 import SeeMyWork from "./pages/SeeMyWork";
 import Contact from "./pages/Contact";
+import ContactForm from "./pages/ContactForm";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<SeeMyWork />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact-form" element={<ContactForm />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

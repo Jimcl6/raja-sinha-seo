@@ -5,10 +5,10 @@ import { Check } from 'lucide-react';
 
 const ThreeHourService = () => {
   return (
-    <section className="py-16 bg-yellow-500 relative overflow-hidden">
+    <section className="py-16 bg-gray-900 relative overflow-hidden">
       {/* Background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3882&q=80')"
         }}
@@ -52,13 +52,13 @@ const ThreeHourService = () => {
           </div>
           
           <div className="text-center">
-            <p className="text-xl text-white font-semibold mb-6">It's a real review.</p>
+            <p className="text-xl text-white font-semibold mb-6 italic">IT'S A REAL REVIEW!</p>
             <Button 
               size="lg" 
               className="bg-white text-yellow-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold"
               onClick={() => window.open('https://calendly.com/raja-sinha-seo-consultancy/30min?back=1&month=2025-05', '_blank')}
             >
-              Get yours now
+              Get Yours Now
             </Button>
           </div>
         </div>

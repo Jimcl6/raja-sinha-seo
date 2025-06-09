@@ -5,6 +5,17 @@ import { CheckCircle2, Award, TrendingUp, Globe2 } from 'lucide-react';
 const Credentials = () => {
   return (
     <div className="relative py-16 overflow-hidden bg-gray-50">
+      {/* Background image - desktop */}
+      <div className="absolute inset-0 z-0 hidden md:block">
+        <img 
+          src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=1920&h=1080&fit=crop" 
+          alt="Skyscrapers and blue sky" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+      
       {/* Background image - mobile */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img 
@@ -19,7 +30,7 @@ const Credentials = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="gradient-text">My Background</span>
+          <span className="gradient-text md:text-white">My Background</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

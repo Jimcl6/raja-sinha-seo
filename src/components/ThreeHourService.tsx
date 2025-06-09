@@ -6,7 +6,7 @@ import { Check, Clock } from 'lucide-react';
 
 const ThreeHourService = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-yellow-50 via-amber-50 to-yellow-100 relative overflow-hidden">
+    <section className="py-16 bg-yellow-500 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -17,15 +17,15 @@ const ThreeHourService = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
-            <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 via-amber-600 to-yellow-700 bg-clip-text text-transparent">
-              Know what's going on with your website! — in <span className="text-yellow-600">Just 3 Hours</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white">
+              Know what's going on with your website! — in <span className="text-yellow-100">Just 3 Hours</span>
             </h2>
-            <div className="ml-4 h-12 w-12 bg-gradient-to-br from-yellow-400 to-amber-500 text-white rounded-full flex items-center justify-center animate-bounce shadow-lg">
+            <div className="ml-4 h-12 w-12 bg-white text-yellow-600 rounded-full flex items-center justify-center animate-bounce shadow-lg">
               <Clock className="h-7 w-7" />
             </div>
           </div>
-          <div className="inline-block bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg border border-yellow-200">
-            <p className="font-feature italic text-2xl bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+          <div className="inline-block">
+            <p className="font-feature italic text-2xl text-white">
               Get a Realistic Review.
             </p>
           </div>
@@ -34,7 +34,7 @@ const ThreeHourService = () => {
         <div className="flex flex-col lg:flex-row gap-10 items-center">
           <div className="w-full lg:w-1/2 space-y-6">
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-yellow-100">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-800">Most of the time we are unsure of our own abilities. Your website is kind of like that.</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800">Most of the time we are unsure of our own abilities. Your website is kinda like that!</h3>
               <h4 className="text-xl font-semibold mb-4 text-gray-800">In just a few hours, you'll know:</h4>
               <ul className="space-y-4">
                 {[

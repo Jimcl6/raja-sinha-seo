@@ -10,12 +10,12 @@ const ThreeHourService = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
-          backgroundImage: "url('/lovable-uploads/30244f71-053f-43cb-a457-eb9e1858be67.png')"
+          backgroundImage: "url('/lovable-uploads/e37401c8-5326-4ca9-92ac-04b93a6d4b43.png')"
         }}
       ></div>
       
       {/* Dark overlay for text legibility */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
       
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">

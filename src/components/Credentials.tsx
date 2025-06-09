@@ -17,8 +17,8 @@ const Credentials = () => {
       {/* Background image - desktop */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <img 
-          src="/lovable-uploads/ff650090-8b4f-448e-9ad3-b1ce320f3b1b.png" 
-          alt="Credentials background" 
+          src="/lovable-uploads/979d3dda-0bcf-4b5a-b1c6-7c6355704aa5.png" 
+          alt="Professional background" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-yellow-500/20"></div>

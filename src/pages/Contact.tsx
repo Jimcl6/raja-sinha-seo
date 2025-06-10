@@ -44,6 +44,7 @@ const Contact = () => {
   });
 
   const onSubmit = (values: FormValues) => {
+    console.log("Contact form submitted with values:", values);
     setIsSubmitting(true);
     
     // Create mailto link with form data
@@ -56,12 +57,14 @@ Message: ${values.message || 'No message provided'}
     `);
     const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
     
+    console.log("Generated mailto link:", mailtoLink);
+    
     // Open email client
     window.location.href = mailtoLink;
     
     // Simulate form submission
     setTimeout(() => {
-      console.log(values);
+      console.log("Form submission completed:", values);
       setIsSubmitting(false);
       setSubmitted(true);
       toast.success("Message sent successfully! We'll be in touch soon.");

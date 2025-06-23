@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,7 +17,7 @@ const ClientHelp = () => {
           </p>
           <p className="text-xl md:text-2xl text-gray-600 mt-4 font-medium">
             Not sure it works? Gave up on it? Just cruising?<br />
-            I'll meet you there—and help you see what your site could really do.
+            I'll meet you there and help you see what your site could really do.
           </p>
         </div>
         

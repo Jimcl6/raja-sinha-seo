@@ -14,6 +14,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from '@/components/ui/sonner';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { supabase } from '@/integrations/supabase/client';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -43,33 +44,59 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (values: FormValues) => {
+  const onSubmit = async (values: FormValues) => {
     console.log("Contact form submitted with values:", values);
     setIsSubmitting(true);
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent("Contact Form Submission");
-    const body = encodeURIComponent(`
+    try {
+      // Save to Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          message: values.message || null,
+        });
+
+      if (error) {
+        console.error('Error saving to database:', error);
+        // Fall back to mailto if database save fails
+        const subject = encodeURIComponent("Contact Form Submission");
+        const body = encodeURIComponent(`
 Name: ${values.name}
 Email: ${values.email}
 Phone: ${values.phone}
 Message: ${values.message || 'No message provided'}
-    `);
-    const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
-    
-    console.log("Generated mailto link:", mailtoLink);
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submission completed:", values);
-      setIsSubmitting(false);
+        `);
+        const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+        
+        toast.error("There was an issue saving your message, but we've opened your email client as a backup.");
+      } else {
+        console.log("Form submission saved to database successfully");
+        toast.success("Message sent successfully! We'll be in touch soon.");
+        
+        // Also send via mailto as additional notification
+        const subject = encodeURIComponent("Contact Form Submission");
+        const body = encodeURIComponent(`
+Name: ${values.name}
+Email: ${values.email}
+Phone: ${values.phone}
+Message: ${values.message || 'No message provided'}
+        `);
+        const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+      }
+
       setSubmitted(true);
-      toast.success("Message sent successfully! We'll be in touch soon.");
       form.reset();
-    }, 1500);
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

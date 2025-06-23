@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, FileText, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const ThreeHourService = () => {
@@ -42,32 +42,31 @@ const ThreeHourService = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-yellow-100 mb-8 relative overflow-hidden">
-            {/* Background image for the "What you'll receive" section */}
-            <div 
-              className="absolute inset-0 bg-cover bg-center opacity-10"
-              style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop')"
-              }}
-            ></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-semibold mb-6 text-gray-800 text-center">What you'll receive:</h3>
-              <ul className="space-y-4">
-                {[
-                  "A no-pressure PDF with key findings",
-                  "Clear takeaways on how to move forward",
-                  "No jargon, no cookie-cutter checklists — just pure insight",
-                  "A 3-hour review, but a long-lasting impact"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="h-6 w-6 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                      <Check className="h-4 w-4 text-white" />
-                    </div>
-                    <span className="text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-yellow-100 mb-8">
+            <div className="flex items-center justify-center mb-6">
+              <h3 className="text-2xl font-semibold text-gray-800">What you'll receive:</h3>
+              <div className="ml-4 relative">
+                <FileText className="h-8 w-8 text-red-500" />
+                <Star className="h-3 w-3 text-yellow-500 absolute -top-1 -right-1" />
+                <Star className="h-2 w-2 text-yellow-400 absolute top-1 -right-2" />
+                <Star className="h-2 w-2 text-yellow-600 absolute -top-2 right-0" />
+              </div>
             </div>
+            <ul className="space-y-4">
+              {[
+                "A no-pressure PDF with key findings",
+                "Clear takeaways on how to move forward",
+                "No jargon, no cookie-cutter checklists — just pure insight",
+                "A 3-hour review, but a long-lasting impact"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <div className="h-6 w-6 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                    <Check className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="text-lg">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           
           <div className="text-center">

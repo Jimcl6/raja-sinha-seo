@@ -20,8 +20,9 @@ const ServicesHero = () => {
               
               <p className="text-xl md:text-2xl text-gray-700 mb-8">
                 Most companies hire me for SEO.<br />
+                <br />
                 Once they see the value of outsourcing, they ask me to recruit talent for graphics, video editing, programming, IT, and more.<br />
-                <span className="gradient-text">Scroll to know more.</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500">Scroll to know more.</span>
               </p>
               
               <div className="flex justify-center lg:justify-start mb-8">

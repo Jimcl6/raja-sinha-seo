@@ -47,7 +47,7 @@ const ThreeHourService = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center opacity-10"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1568667256549-094345857637?w=800&h=600&fit=crop')"
+                backgroundImage: "url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop')"
               }}
             ></div>
             <div className="relative z-10">

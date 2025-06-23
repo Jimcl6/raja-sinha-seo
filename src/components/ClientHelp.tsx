@@ -14,7 +14,7 @@ const ClientHelp = () => {
           <p className="text-lg font-feature italic text-gray-600">
             No Matter Where You're Starting From
           </p>
-          <p className="text-base text-gray-600 mt-4">
+          <p className="text-xl md:text-2xl text-gray-600 mt-4 font-medium">
             Not sure it works? Gave up on it? Just cruising?<br />
             I'll meet you there—and help you see what your site could really do.
           </p>

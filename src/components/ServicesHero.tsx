@@ -21,7 +21,7 @@ const ServicesHero = () => {
               <p className="text-xl md:text-2xl text-gray-700 mb-8">
                 Most companies hire me for SEO.<br />
                 <br />
-                Once they see the value and quality of outsourcing, I also engage in building remote teams for graphics, video editing, programming, IT, and more.<br />
+                I also bring years of experience in building specialized remote teams and handling offshore staffing requirements.<br />
                 <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500">Scroll to know more.</span>
               </p>

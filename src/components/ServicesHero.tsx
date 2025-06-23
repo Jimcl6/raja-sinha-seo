@@ -22,6 +22,7 @@ const ServicesHero = () => {
                 Most companies hire me for SEO.<br />
                 <br />
                 Once they see the value of outsourcing, they ask me to recruit talent for graphics, video editing, programming, IT, and more.<br />
+                <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500">Scroll to know more.</span>
               </p>
               

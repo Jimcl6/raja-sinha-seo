@@ -41,9 +41,20 @@ const ServicesList = () => {
     <section className="py-8 bg-[#f0f0f0]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             <span className="gradient-text">My Core Services</span>
           </h2>
+          
+          {/* Featured Image for SEO Services */}
+          <div className="flex justify-center mb-12">
+            <div className="w-full max-w-2xl">
+              <img 
+                src="/images/seo-services-featured.jpg" 
+                alt="SEO Services - Analytics and optimization tools" 
+                className="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (

@@ -42,7 +42,7 @@ const OffshoreStaffing = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="gradient-text">Remote & Offshore Staffing Solutions</span>
             </h2>
@@ -50,6 +50,17 @@ const OffshoreStaffing = () => {
               Build your own dedicated team in the Philippines with skilled professionals 
               who can handle your marketing, design, and development needs.
             </p>
+          </div>
+          
+          {/* Featured Image for Remote Team */}
+          <div className="flex justify-center mb-12">
+            <div className="w-full max-w-2xl">
+              <img 
+                src="/images/remote-team-featured.jpg" 
+                alt="Remote team collaboration and offshore staffing" 
+                className="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

@@ -73,8 +73,8 @@ const ServicesList = () => {
                   backgroundPosition: 'center',
                 }}
               >
-                {/* Dark overlay for better text contrast */}
-                <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                {/* Dark overlay for better text contrast - removed backdrop-blur-sm */}
+                <div className="absolute inset-0 bg-black/60"></div>
                 
                 {/* Content */}
                 <div className="relative z-10 flex items-center mb-4">

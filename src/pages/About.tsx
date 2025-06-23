@@ -12,46 +12,6 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        {/* About Hero Section - similar to Services */}
-        <div className="relative overflow-hidden bg-white pt-8 pb-10 md:pt-12 md:pb-14">
-          <div className="absolute inset-0 z-0 opacity-5">
-            <div className="h-full w-full bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:20px_20px]"></div>
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left side - Text content */}
-                <div className="text-center lg:text-left">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight fade-in mb-8">
-                    <span className="gradient-text">About Raja Sinha</span>
-                  </h1>
-                  
-                  <p className="text-xl md:text-2xl text-gray-700 mb-8">
-                    SEO consulting with a business-owner mindset and a passion for clarity.
-                  </p>
-                  
-                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-6 text-lg">
-                    Book a Free Strategy Call
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </div>
-                
-                {/* Right side - Your photo */}
-                <div className="flex justify-center lg:justify-end">
-                  <div className="w-full max-w-md aspect-[3/4] rounded-lg overflow-hidden shadow-xl border-4 border-yellow-100">
-                    <img 
-                      src="/lovable-uploads/01ac6572-e5af-41d9-8f12-cf175b932d61.png" 
-                      alt="Raja Sinha" 
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
         {/* Introduction Section */}
         <section className="py-16 bg-[#f0f0f0]">
           <div className="container mx-auto px-4">

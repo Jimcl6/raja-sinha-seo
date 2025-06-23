@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -8,7 +7,7 @@ const ThreeHourService = () => {
   const navigate = useNavigate();
 
   const handleGetYoursNow = () => {
-    navigate('/contact-form');
+    navigate('/3-hour-review');
   };
 
   return (

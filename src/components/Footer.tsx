@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Instagram, Youtube, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -17,8 +18,7 @@ const Footer = () => {
               />
             </Link>
             <div className="text-gray-400 mb-4">
-              <p className="mb-2">2nd Floor, Dela Costa St, Block 1 Lot 1, Phase 5</p>
-              <p className="mb-2">corner Madrid St, Bacoor, 4102 Cavite</p>
+              <p className="mb-2">2nd Floor, Dela Costa St, Block 1 Lot 1, Phase 5, corner Madrid St, Bacoor, 4102 Cavite</p>
               <p>+63 961 752 1638</p>
             </div>
             <div className="flex space-x-4">

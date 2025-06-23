@@ -19,7 +19,7 @@ const ServicesHero = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-700 mb-8">
-                For more than 15 years I have had nothing but the pleasure of working with people across continents. Scroll to know more.
+                Most companies hire me for SEO. Once they see the value of outsourcing, they ask me to recruit talent for graphics, video editing, programming, IT, and more. Scroll to know more.
               </p>
               
               <div className="flex justify-center lg:justify-start mb-8">

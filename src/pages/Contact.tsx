@@ -118,8 +118,8 @@ Message: ${values.message || 'No message provided'}
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 font-medium">Phone</p>
-                    <a href="tel:+14152845678" className="text-gray-900 hover:text-yellow-600 transition-colors">
-                      +1 (415) 284-5678
+                    <a href="tel:+639617521638" className="text-gray-900 hover:text-yellow-600 transition-colors">
+                      +63 961 752 1638
                     </a>
                   </div>
                 </div>
@@ -303,8 +303,8 @@ Message: ${values.message || 'No message provided'}
                 </div>
                 <div>
                   <p className="text-sm text-gray-600 font-medium">Phone</p>
-                  <a href="tel:+14152845678" className="text-gray-900 hover:text-yellow-600 transition-colors">
-                    +1 (415) 284-5678
+                  <a href="tel:+639617521638" className="text-gray-900 hover:text-yellow-600 transition-colors">
+                    +63 961 752 1638
                   </a>
                 </div>
               </div>

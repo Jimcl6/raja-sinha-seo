@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, ChevronRight } from 'lucide-react';
+import { Instagram, Facebook, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -22,8 +22,21 @@ const Footer = () => {
               <p>+63 961 752 1638</p>
             </div>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a 
+                href="https://www.instagram.com/rajasinhaseo/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-400 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/people/Raja-Sinha-SEO-Consultancy/61576320595828/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-400 transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
               </a>
             </div>
           </div>

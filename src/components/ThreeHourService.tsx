@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -32,7 +33,7 @@ const ThreeHourService = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">
             Think your website could do better?
           </h2>
           <p className="text-2xl text-white font-semibold">
@@ -41,23 +42,32 @@ const ThreeHourService = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-yellow-100 mb-8">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800 text-center">What you'll receive:</h3>
-            <ul className="space-y-4">
-              {[
-                "A no-pressure PDF with key findings",
-                "Clear takeaways on how to move forward",
-                "No jargon, no cookie-cutter checklists — just pure insight",
-                "A 3-hour review, but a long-lasting impact"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="h-6 w-6 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <span className="text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-yellow-100 mb-8 relative overflow-hidden">
+            {/* Background image for the "What you'll receive" section */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center opacity-10"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop')"
+              }}
+            ></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800 text-center">What you'll receive:</h3>
+              <ul className="space-y-4">
+                {[
+                  "A no-pressure PDF with key findings",
+                  "Clear takeaways on how to move forward",
+                  "No jargon, no cookie-cutter checklists — just pure insight",
+                  "A 3-hour review, but a long-lasting impact"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="h-6 w-6 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <Check className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           
           <div className="text-center">

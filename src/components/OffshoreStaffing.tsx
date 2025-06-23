@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Users, Palette, Code, Zap, Video, Brain } from 'lucide-react';
+import { Users, Palette, Code, Zap, Video, Brain, UserCheck, User } from 'lucide-react';
 
 const OffshoreStaffing = () => {
   const staffingServices = [
@@ -10,6 +9,16 @@ const OffshoreStaffing = () => {
       title: "SEO & Marketing Teams",
       description: "Dedicated SEO specialists and marketing professionals to scale your campaigns.",
       icon: Users
+    },
+    {
+      title: "Specialized Virtual Assistants",
+      description: "Remote assistants skilled at one or two specific tasks - marketing, design, or any specialty requiring focused expertise.",
+      icon: UserCheck
+    },
+    {
+      title: "General Virtual Assistants",
+      description: "Versatile assistants who handle multiple tasks and serve as your all-around virtual support team.",
+      icon: User
     },
     {
       title: "Graphic Design Support",

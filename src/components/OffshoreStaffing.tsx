@@ -92,8 +92,8 @@ const OffshoreStaffing = () => {
                   backgroundPosition: 'center',
                 }}
               >
-                {/* Overlay for opacity */}
-                <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+                {/* Dark overlay for better text contrast */}
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
                 
                 {/* Content */}
                 <div className="relative z-10 flex items-start">
@@ -101,8 +101,8 @@ const OffshoreStaffing = () => {
                     <service.icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-gray-600">{service.description}</p>
+                    <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
+                    <p className="text-gray-200">{service.description}</p>
                   </div>
                 </div>
               </Card>

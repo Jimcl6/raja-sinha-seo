@@ -8,32 +8,38 @@ const ServicesList = () => {
     {
       title: "Site Audit",
       description: "Complete technical analysis of your website to identify issues and opportunities for improvement.",
-      icon: Search
+      icon: Search,
+      backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Keyword Research",
       description: "In-depth research to find the most valuable keywords for your business and niche.",
-      icon: FileText
+      icon: FileText,
+      backgroundImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "On-Page SEO",
       description: "Optimization of your website's content, structure, and technical elements.",
-      icon: Globe
+      icon: Globe,
+      backgroundImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Off-Page SEO",
       description: "Building authority through strategic link building and external optimization.",
-      icon: Link2
+      icon: Link2,
+      backgroundImage: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "CRO - Conversion Rate Optimization",
       description: "Improving your website's ability to convert visitors into customers.",
-      icon: TrendingUp
+      icon: TrendingUp,
+      backgroundImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       title: "Local Maps Optimization & Local SEO",
       description: "Optimizing your business for local search results and Google My Business presence.",
-      icon: MapPin
+      icon: MapPin,
+      backgroundImage: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -58,14 +64,28 @@ const ServicesList = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mr-4">
+              <Card 
+                key={index} 
+                className="p-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden"
+                style={{
+                  backgroundImage: `url(${service.backgroundImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Dark overlay for better text contrast */}
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                
+                {/* Content */}
+                <div className="relative z-10 flex items-center mb-4">
+                  <div className="h-12 w-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-bold">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 </div>
-                <p className="text-gray-600">{service.description}</p>
+                <div className="relative z-10">
+                  <p className="text-gray-200">{service.description}</p>
+                </div>
               </Card>
             ))}
           </div>

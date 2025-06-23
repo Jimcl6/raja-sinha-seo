@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -59,33 +58,44 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
 
       if (error) {
         console.error('Error saving to database:', error);
-        // Fall back to mailto if database save fails
-        const subject = encodeURIComponent("Contact Form Submission");
-        const body = encodeURIComponent(`
-Name: ${values.name}
-Email: ${values.email}
-Phone: ${values.phone}
-Message: ${values.message || 'No message provided'}
-        `);
-        const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-        
-        toast.error("There was an issue saving your message, but we've opened your email client as a backup.");
-      } else {
-        console.log("Form submission saved to database successfully");
-        toast.success("Message sent successfully! We'll be in touch soon.");
-        
-        // Also send via mailto as additional notification
-        const subject = encodeURIComponent("Contact Form Submission");
-        const body = encodeURIComponent(`
-Name: ${values.name}
-Email: ${values.email}
-Phone: ${values.phone}
-Message: ${values.message || 'No message provided'}
-        `);
-        const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
+        toast.error("There was an issue saving your message. Please try again.");
+        return;
       }
+
+      console.log("Form submission saved to database successfully");
+
+      // Send confirmation email to user
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-contact-confirmation', {
+          body: {
+            name: values.name,
+            email: values.email,
+          },
+        });
+
+        if (emailError) {
+          console.error('Error sending confirmation email:', emailError);
+          // Don't fail the whole process if email fails
+          toast.success("Message sent successfully! Note: confirmation email may be delayed.");
+        } else {
+          console.log("Confirmation email sent successfully");
+          toast.success("Message sent successfully! Check your email for confirmation.");
+        }
+      } catch (emailError) {
+        console.error('Error sending confirmation email:', emailError);
+        toast.success("Message sent successfully! Note: confirmation email may be delayed.");
+      }
+
+      // Also send via mailto as additional notification to you
+      const subject = encodeURIComponent("Contact Form Submission");
+      const body = encodeURIComponent(`
+Name: ${values.name}
+Email: ${values.email}
+Phone: ${values.phone}
+Message: ${values.message || 'No message provided'}
+      `);
+      const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
 
       onSuccess();
       form.reset();

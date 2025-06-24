@@ -1,110 +1,7 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Star } from 'lucide-react';
-import { fetchGoogleReviews } from '@/utils/googlePlacesApi';
 
 const GoogleReviews = () => {
-  const [reviews, setReviews] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [overallRating, setOverallRating] = useState(5.0);
-
-  // You need to replace these with your actual values
-  const GOOGLE_PLACES_API_KEY = 'YOUR_GOOGLE_PLACES_API_KEY'; // Replace with your API key
-  const PLACE_ID = 'YOUR_PLACE_ID'; // Replace with your Google Business Place ID
-
-  useEffect(() => {
-    const loadReviews = async () => {
-      try {
-        if (GOOGLE_PLACES_API_KEY === 'YOUR_GOOGLE_PLACES_API_KEY' || PLACE_ID === 'YOUR_PLACE_ID') {
-          // Use fallback reviews if API key or Place ID not configured
-          setReviews([
-            {
-              author_name: "Sarah Johnson",
-              rating: 5,
-              text: "Raja's SEO expertise transformed our website traffic. We saw a 300% increase in organic visitors within 6 months. His strategic approach and clear communication made the entire process smooth.",
-              relative_time_description: "2 months ago"
-            },
-            {
-              author_name: "Michael Chen",
-              rating: 5,
-              text: "Outstanding results! Raja helped us rank #1 for our target keywords. His technical knowledge and dedication to client success is unmatched. Highly recommended for any business serious about SEO.",
-              relative_time_description: "1 month ago"
-            },
-            {
-              author_name: "Emma Rodriguez",
-              rating: 5,
-              text: "Professional, knowledgeable, and results-driven. Raja's SEO strategies boosted our online presence significantly. The detailed reports and regular updates kept us informed throughout the process.",
-              relative_time_description: "3 weeks ago"
-            },
-            {
-              author_name: "David Thompson",
-              rating: 5,
-              text: "Exceptional service! Raja's SEO work helped our local business dominate search results. We've seen consistent growth in leads and revenue since working with him. Worth every penny!",
-              relative_time_description: "2 weeks ago"
-            }
-          ]);
-          setLoading(false);
-          return;
-        }
-
-        const data = await fetchGoogleReviews(PLACE_ID, GOOGLE_PLACES_API_KEY);
-        
-        if (data.status === 'OK' && data.result.reviews) {
-          setReviews(data.result.reviews);
-          setOverallRating(data.result.rating || 5.0);
-        } else {
-          throw new Error('No reviews found');
-        }
-      } catch (err) {
-        console.error('Error fetching Google reviews:', err);
-        setError('Failed to load reviews');
-        // Fallback to placeholder reviews
-        setReviews([
-          {
-            author_name: "Sarah Johnson",
-            rating: 5,
-            text: "Raja's SEO expertise transformed our website traffic. We saw a 300% increase in organic visitors within 6 months.",
-            relative_time_description: "2 months ago"
-          },
-          {
-            author_name: "Michael Chen",
-            rating: 5,
-            text: "Outstanding results! Raja helped us rank #1 for our target keywords. His technical knowledge is unmatched.",
-            relative_time_description: "1 month ago"
-          }
-        ]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadReviews();
-  }, []);
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Star
-        key={index}
-        className={`h-4 w-4 ${
-          index < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
-        }`}
-      />
-    ));
-  };
-
-  if (loading) {
-    return (
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <p className="text-lg text-gray-600">Loading reviews...</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -120,38 +17,43 @@ const GoogleReviews = () => {
             />
             <span className="text-lg font-semibold text-gray-700">Google Reviews</span>
           </div>
-          <div className="flex items-center justify-center space-x-1">
-            {renderStars(Math.round(overallRating))}
-            <span className="ml-2 text-lg font-semibold text-gray-700">{overallRating.toFixed(1)}</span>
-          </div>
-          {error && (
-            <p className="text-sm text-orange-600 mt-2">
-              Using sample reviews - configure API key for live reviews
-            </p>
-          )}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {reviews.slice(0, 4).map((review, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  {review.author_name.split(' ').map((n: string) => n[0]).join('')}
-                </div>
-                <div className="ml-3">
-                  <h4 className="font-semibold text-gray-800">{review.author_name}</h4>
-                  <div className="flex items-center space-x-1">
-                    {renderStars(review.rating)}
-                  </div>
-                </div>
+        {/* Google Reviews Widget Container */}
+        <div className="max-w-6xl mx-auto">
+          {/* Replace this div with your actual Google Reviews widget embed code */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
+            <div className="mb-4">
+              <div className="flex items-center justify-center space-x-1 mb-2">
+                {Array.from({ length: 5 }, (_, index) => (
+                  <Star
+                    key={index}
+                    className="h-5 w-5 text-yellow-400 fill-current"
+                  />
+                ))}
+                <span className="ml-2 text-lg font-semibold text-gray-700">5.0</span>
               </div>
-              <p className="text-gray-600 mb-3 leading-relaxed">{review.text}</p>
-              <p className="text-sm text-gray-500">{review.relative_time_description}</p>
+              <p className="text-gray-600 mb-4">
+                To display your actual Google Reviews widget:
+              </p>
+              <ol className="text-left text-sm text-gray-600 space-y-2 max-w-md mx-auto">
+                <li>1. Go to <a href="https://search.google.com/local/writereview?placeid=" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google My Business</a></li>
+                <li>2. Find your business and copy the Place ID from the URL</li>
+                <li>3. Use a Google Reviews widget generator like <a href="https://www.reviewsongoogle.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">ReviewsOnGoogle.com</a></li>
+                <li>4. Generate the widget code and replace this placeholder</li>
+              </ol>
             </div>
-          ))}
+            
+            {/* Placeholder widget - replace with actual embed code */}
+            <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 bg-gray-50">
+              <p className="text-gray-500 text-sm">
+                Google Reviews Widget will appear here
+              </p>
+              <p className="text-xs text-gray-400 mt-2">
+                Replace this div with your Google Reviews widget embed code
+              </p>
+            </div>
+          </div>
         </div>
         
         <div className="text-center mt-8">

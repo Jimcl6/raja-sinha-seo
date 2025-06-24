@@ -7,6 +7,7 @@ import ClientHelp from '@/components/ClientHelp';
 import ThreeHourService from '@/components/ThreeHourService';
 import WhyMe from '@/components/WhyMe';
 import ContactCTA from '@/components/ContactCTA';
+import GoogleReviews from '@/components/GoogleReviews';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <ClientHelp />
         <WhyMe />
         <ContactCTA />
+        <GoogleReviews />
       </main>
       <Footer />
     </div>

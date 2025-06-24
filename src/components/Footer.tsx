@@ -87,12 +87,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Get In Touch</h3>
             <p className="text-gray-400 mb-4">
-              Have questions or want to discuss your SEO needs? Reach out directly:
+              Have questions or want to discuss your SEO needs? Book a consultation call.
             </p>
-            <a href="mailto:raja@rajasinhaSEO.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-              raja@rajasinhaSEO.com
-            </a>
-            <p className="text-gray-400 mt-4">
+            <p className="text-gray-400">
               Response time: Fast
             </p>
           </div>

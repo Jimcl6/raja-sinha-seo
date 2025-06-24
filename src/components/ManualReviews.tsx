@@ -7,35 +7,38 @@ const ManualReviews = () => {
   const reviews = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      company: "TechStart Solutions",
+      name: "David D.",
       rating: 5,
-      text: "Raja transformed our website's visibility completely. We went from page 3 to ranking #1 for our main keywords in just 4 months. His strategic approach and clear communication made all the difference.",
+      text: "Roger's team has done an amazing job for us in many capacities, from SEO, data entry to advanced propriety web applications. I highly recommend them, though we will never tell anyone about them so as not to give away our best competitive advantage.",
       source: "Google"
     },
     {
       id: 2,
-      name: "Michael Chen",
-      company: "GreenLeaf Consulting",
+      name: "Ivan S.",
       rating: 5,
-      text: "Outstanding SEO work! The detailed audit Raja provided opened our eyes to so many missed opportunities. Our organic traffic has doubled since implementing his recommendations.",
-      source: "LinkedIn"
+      text: "Roger has been an integral component to the evolution of our business, bringing a freshness and heightened presence to our placement on the web. We couldn't be more pleased.",
+      source: "Google"
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      company: "Coastal Realty Group",
+      name: "Jeff S.",
       rating: 5,
-      text: "Professional, knowledgeable, and results-driven. Raja's SEO strategies helped us dominate local search results. Highly recommend his services to any business serious about growth.",
+      text: "Roger has worked with my company for years. They offer a very good value for United States-based customers and they will continue to be our SEO and web developer. I am happy with their pricing and their service.",
       source: "Google"
     },
     {
       id: 4,
-      name: "David Thompson",
-      company: "Urban Fitness Studio",
+      name: "John F.",
       rating: 5,
-      text: "The 3-hour SEO consultation was incredibly valuable. Raja identified critical issues and provided a clear roadmap for improvement. Best investment we've made for our online presence.",
-      source: "Yelp"
+      text: "I am so fortunate to have discovered Roger, who took time to understand my business inside and out. He helped clarify some of my thinking about my business model. He is well responsive, friendly and thorough. My experience with him has been excellent since day one.",
+      source: "Google"
+    },
+    {
+      id: 5,
+      name: "Jacob",
+      rating: 5,
+      text: "Roger has helped us more than two years now and I am bold enough to say that our success as a business has hinged upon his help in our website and online experience. I am very happy working with him and not only does he do the job we request but he engages us.",
+      source: "Google"
     }
   ];
 
@@ -62,7 +65,7 @@ const ManualReviews = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {reviews.map((review) => (
             <Card key={review.id} className="shadow-md hover:shadow-lg transition-all border-l-4 border-l-yellow-400">
               <CardContent className="p-6">
@@ -82,7 +85,6 @@ const ManualReviews = () => {
                     </p>
                     <div className="border-t pt-4">
                       <p className="font-semibold text-gray-900">{review.name}</p>
-                      <p className="text-sm text-gray-600">{review.company}</p>
                     </div>
                   </div>
                 </div>

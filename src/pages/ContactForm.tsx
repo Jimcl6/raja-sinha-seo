@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ManualReviews from '@/components/ManualReviews';
 
 interface ContactFormData {
   name: string;
@@ -140,6 +141,7 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
+        <ManualReviews />
       </main>
       <Footer />
     </div>

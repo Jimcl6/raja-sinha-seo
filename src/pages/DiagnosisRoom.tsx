@@ -1,7 +1,7 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ManualReviews from '@/components/ManualReviews';
 import { Monitor, Search, BookOpen } from 'lucide-react';
 
 const DiagnosisRoom = () => {
@@ -115,6 +115,7 @@ const DiagnosisRoom = () => {
             </div>
           </div>
         </section>
+        <ManualReviews />
       </main>
       <Footer />
     </div>

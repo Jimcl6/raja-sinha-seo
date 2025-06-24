@@ -9,36 +9,31 @@ const ManualReviews = () => {
       id: 1,
       name: "David D.",
       rating: 5,
-      text: "Raja's team has done an amazing job for us in many capacities, from SEO, data entry to advanced propriety web applications. I highly recommend them, though we will never tell anyone about them so as not to give away our best competitive advantage.",
-      source: "Google"
+      text: "Raja's team has done an amazing job for us in many capacities, from SEO, data entry to advanced propriety web applications. I highly recommend them, though we will never tell anyone about them so as not to give away our best competitive advantage."
     },
     {
       id: 2,
       name: "Ivan S.",
       rating: 5,
-      text: "Raja has been an integral component to the evolution of our business, bringing a freshness and heightened presence to our placement on the web. We couldn't be more pleased.",
-      source: "Google"
+      text: "Raja has been an integral component to the evolution of our business, bringing a freshness and heightened presence to our placement on the web. We couldn't be more pleased."
     },
     {
       id: 3,
       name: "Jeff S.",
       rating: 5,
-      text: "Raja has worked with my company for years. They offer a very good value for United States-based customers and they will continue to be our SEO and web developer. I am happy with their pricing and their service.",
-      source: "Google"
+      text: "Raja has worked with my company for years. They offer a very good value for United States-based customers and they will continue to be our SEO and web developer. I am happy with their pricing and their service."
     },
     {
       id: 4,
       name: "John F.",
       rating: 5,
-      text: "I am so fortunate to have discovered Raja, who took time to understand my business inside and out. He helped clarify some of my thinking about my business model. He is well responsive, friendly and thorough. My experience with him has been excellent since day one.",
-      source: "Google"
+      text: "I am so fortunate to have discovered Raja, who took time to understand my business inside and out. He helped clarify some of my thinking about my business model. He is well responsive, friendly and thorough. My experience with him has been excellent since day one."
     },
     {
       id: 5,
       name: "Jacob",
       rating: 5,
-      text: "Raja has helped us more than two years now and I am bold enough to say that our success as a business has hinged upon his help in our website and online experience. I am very happy working with him and not only does he do the job we request but he engages us.",
-      source: "Google"
+      text: "Raja has helped us more than two years now and I am bold enough to say that our success as a business has hinged upon his help in our website and online experience. I am very happy working with him and not only does he do the job we request but he engages us."
     }
   ];
 
@@ -76,9 +71,6 @@ const ManualReviews = () => {
                       <div className="flex mr-2">
                         {renderStars(review.rating)}
                       </div>
-                      <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                        {review.source}
-                      </span>
                     </div>
                     <p className="text-gray-700 mb-4 leading-relaxed">
                       "{review.text}"

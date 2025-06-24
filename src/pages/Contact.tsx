@@ -8,6 +8,7 @@ import ContactForm from '@/components/ContactForm';
 import ContactInfo from '@/components/ContactInfo';
 import ContactImage from '@/components/ContactImage';
 import ContactSuccessMessage from '@/components/ContactSuccessMessage';
+import ManualReviews from '@/components/ManualReviews';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -80,6 +81,7 @@ const Contact = () => {
             <ClientLogos />
           </div>
         </div>
+        <ManualReviews />
       </main>
       <Footer />
     </div>

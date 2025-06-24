@@ -5,6 +5,7 @@ import ServicesHero from '@/components/ServicesHero';
 import ServicesList from '@/components/ServicesList';
 import OffshoreStaffing from '@/components/OffshoreStaffing';
 import ContactCTA from '@/components/ContactCTA';
+import ManualReviews from '@/components/ManualReviews';
 import Footer from '@/components/Footer';
 
 const Services = () => {
@@ -16,6 +17,7 @@ const Services = () => {
         <ServicesList />
         <OffshoreStaffing />
         <ContactCTA />
+        <ManualReviews />
       </main>
       <Footer />
     </div>

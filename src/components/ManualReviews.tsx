@@ -9,35 +9,35 @@ const ManualReviews = () => {
       id: 1,
       name: "David D.",
       rating: 5,
-      text: "Roger's team has done an amazing job for us in many capacities, from SEO, data entry to advanced propriety web applications. I highly recommend them, though we will never tell anyone about them so as not to give away our best competitive advantage.",
+      text: "Raja's team has done an amazing job for us in many capacities, from SEO, data entry to advanced propriety web applications. I highly recommend them, though we will never tell anyone about them so as not to give away our best competitive advantage.",
       source: "Google"
     },
     {
       id: 2,
       name: "Ivan S.",
       rating: 5,
-      text: "Roger has been an integral component to the evolution of our business, bringing a freshness and heightened presence to our placement on the web. We couldn't be more pleased.",
+      text: "Raja has been an integral component to the evolution of our business, bringing a freshness and heightened presence to our placement on the web. We couldn't be more pleased.",
       source: "Google"
     },
     {
       id: 3,
       name: "Jeff S.",
       rating: 5,
-      text: "Roger has worked with my company for years. They offer a very good value for United States-based customers and they will continue to be our SEO and web developer. I am happy with their pricing and their service.",
+      text: "Raja has worked with my company for years. They offer a very good value for United States-based customers and they will continue to be our SEO and web developer. I am happy with their pricing and their service.",
       source: "Google"
     },
     {
       id: 4,
       name: "John F.",
       rating: 5,
-      text: "I am so fortunate to have discovered Roger, who took time to understand my business inside and out. He helped clarify some of my thinking about my business model. He is well responsive, friendly and thorough. My experience with him has been excellent since day one.",
+      text: "I am so fortunate to have discovered Raja, who took time to understand my business inside and out. He helped clarify some of my thinking about my business model. He is well responsive, friendly and thorough. My experience with him has been excellent since day one.",
       source: "Google"
     },
     {
       id: 5,
       name: "Jacob",
       rating: 5,
-      text: "Roger has helped us more than two years now and I am bold enough to say that our success as a business has hinged upon his help in our website and online experience. I am very happy working with him and not only does he do the job we request but he engages us.",
+      text: "Raja has helped us more than two years now and I am bold enough to say that our success as a business has hinged upon his help in our website and online experience. I am very happy working with him and not only does he do the job we request but he engages us.",
       source: "Google"
     }
   ];

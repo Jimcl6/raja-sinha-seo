@@ -1,24 +1,12 @@
 
 import React from 'react';
-import { Mail, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ContactInfo = () => {
   return (
     <div className="space-y-6 bg-white p-6 rounded-lg shadow-md">
       <h3 className="text-2xl font-bold mb-4 gradient-text">Get In Touch</h3>
-      
-      <div className="flex items-start space-x-4">
-        <div className="bg-yellow-100 p-2 rounded-full">
-          <Mail className="h-5 w-5 text-yellow-600" />
-        </div>
-        <div>
-          <p className="text-sm text-gray-600 font-medium">Email</p>
-          <a href="mailto:raja@rajasinhaseo.com" className="text-gray-900 hover:text-yellow-600 transition-colors">
-            raja@rajasinhaseo.com
-          </a>
-        </div>
-      </div>
       
       <div className="flex items-start space-x-4">
         <div className="bg-yellow-100 p-2 rounded-full">

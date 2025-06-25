@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -87,16 +88,7 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
         toast.success("Message sent successfully! Note: confirmation email may be delayed.");
       }
 
-      // Also send via mailto as additional notification to you
-      const subject = encodeURIComponent("Contact Form Submission");
-      const body = encodeURIComponent(`
-Name: ${values.name}
-Email: ${values.email}
-Phone: ${values.phone}
-Message: ${values.message || 'No message provided'}
-      `);
-      const mailtoLink = `mailto:raja@rajasinhaseo.com?subject=${subject}&body=${body}`;
-      window.location.href = mailtoLink;
+      toast.success("Message sent successfully!");
 
       onSuccess();
       form.reset();

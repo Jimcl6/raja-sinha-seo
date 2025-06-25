@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Mail, Calendar, ArrowRight } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ContactCTA = () => {
@@ -32,14 +32,14 @@ const ContactCTA = () => {
               </Button>
             </div>
             
-            {/* Option 2: Email */}
+            {/* Option 2: Contact Form */}
             <div className="bg-white text-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-16 w-16 bg-[#f0f0f0] text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Mail className="h-8 w-8" />
+                <Calendar className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
               <p className="text-gray-600 mb-6">
-                Have questions or prefer email? Send me a message and I'll get back to you within 24 hours.
+                Have questions or prefer to reach out directly? Send me a message and I'll get back to you within 24 hours.
               </p>
               <Link to="/contact">
                 <Button 

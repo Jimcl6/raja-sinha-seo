@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -109,9 +110,9 @@ Message: ${values.message || 'No message provided'}
 
   return (
     <>
-      <h2 className="text-2xl font-bold mb-6">Send Me a Message</h2>
+      <h2 className="text-2xl font-bold mb-4">Send Me a Message</h2>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
             control={form.control}
             name="name"
@@ -172,7 +173,7 @@ Message: ${values.message || 'No message provided'}
                 <FormControl>
                   <Textarea 
                     placeholder="Tell me about your SEO needs..." 
-                    className="min-h-32"
+                    className="min-h-20"
                     {...field} 
                   />
                 </FormControl>

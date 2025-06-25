@@ -35,6 +35,13 @@ const Contact = () => {
             Not for nothing, but if you're here for SEO — you came to the right place.
           </p>
 
+          {/* Mobile image - only visible on mobile */}
+          {isMobile && (
+            <div className="mb-8 mx-4">
+              <ContactImage />
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-6xl mx-auto mt-12">
             {/* Left column with image and contact info - hidden on mobile */}
             <div className={`flex flex-col justify-center ${isMobile ? 'hidden' : 'block'}`}>
@@ -42,24 +49,10 @@ const Contact = () => {
               <ContactInfo />
             </div>
 
-            {/* Right column with form - for mobile this has background image */}
-            <div className={`relative ${isMobile ? 'pt-[50%]' : ''}`}>
-              {/* Background image for mobile only */}
-              {isMobile && (
-                <div className="absolute inset-0 z-0">
-                  <div className="w-full h-full relative">
-                    <img 
-                      src="/lovable-uploads/7532a2f8-b4e4-437a-80c4-28235766761e.png" 
-                      alt="Raja Sinha SEO Consultancy" 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-                  </div>
-                </div>
-              )}
-
+            {/* Right column with form */}
+            <div className="relative">
               {/* Form content */}
-              <div className={`bg-white p-8 rounded-lg shadow-lg border border-gray-200 ${isMobile ? 'relative z-10 -mt-[30%] mx-4' : ''}`}>
+              <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
                 {!submitted ? (
                   <ContactForm onSuccess={handleSuccess} />
                 ) : (

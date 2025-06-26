@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
@@ -34,6 +33,12 @@ const ManualReviews = () => {
       name: "Jacob",
       rating: 5,
       text: "Raja has helped us more than two years now and I am bold enough to say that our success as a business has hinged upon his help in our website and online experience. I am very happy working with him and not only does he do the job we request but he engages us."
+    },
+    {
+      id: 6,
+      name: "Elyzar",
+      rating: 5,
+      text: "Raja is someone who actually understands how SEO works over the long run. He doesn't chase tricks—he builds strategies that stick. Highly recommended."
     }
   ];
 

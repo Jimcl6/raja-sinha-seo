@@ -73,7 +73,7 @@ const About = () => {
                     <div className="rounded-lg overflow-hidden shadow-xl border-2 border-yellow-100 transform hover:scale-105 transition-transform duration-300">
                       <div className="aspect-w-4 aspect-h-3 w-full bg-gray-100">
                         <img 
-                          src="/lovable-uploads/f58edded-4932-42c6-bd20-f5c5aa22069b.png" 
+                          src="/lovable-uploads/341fb579-791b-4811-969c-65588442529c.png" 
                           alt="Raja Sinha" 
                           className="w-full h-full object-cover"
                         />

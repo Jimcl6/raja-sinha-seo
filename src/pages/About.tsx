@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -79,7 +78,7 @@ const About = () => {
                         />
                       </div>
                       <div className="p-4 bg-white">
-                        <p className="text-sm text-gray-500">Diving deep into search analytics to uncover opportunities</p>
+                        <p className="text-sm text-gray-500">Tap into your Full Search Potential!</p>
                       </div>
                     </div>
                     
@@ -120,7 +119,7 @@ const About = () => {
                         />
                       </div>
                       <div className="p-4 bg-white">
-                        <p className="text-sm text-gray-500">Turning complex data into actionable strategies</p>
+                        <p className="text-sm text-gray-500">Know more about the full potential of your website.</p>
                       </div>
                     </div>
                     

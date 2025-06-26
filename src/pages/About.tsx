@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -113,8 +114,8 @@ const About = () => {
                     <div className="rounded-lg overflow-hidden shadow-xl border-2 border-yellow-100 transform hover:scale-105 transition-transform duration-300">
                       <div className="aspect-w-4 aspect-h-3 w-full bg-gray-100">
                         <img 
-                          src="/lovable-uploads/01ac6572-e5af-41d9-8f12-cf175b932d61.png" 
-                          alt="Raja Sinha - Turning complex data into actionable strategies" 
+                          src="/lovable-uploads/7fa9f7a9-4fc1-46d6-8e0a-fa213b22e762.png" 
+                          alt="Raja Sinha - Maximizing your website's potential" 
                           className="w-full h-full object-cover"
                         />
                       </div>

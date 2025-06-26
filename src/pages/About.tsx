@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -20,7 +19,7 @@ const About = () => {
                 <div className="h-12 w-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
                   <Book className="h-6 w-6 text-white" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold">👋 A Bit About Me — From Language Lover to SEO Guide</h2>
+                <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent font-montserrat">A Bit About Me — From Language Lover to SEO Guide</h2>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -105,7 +104,7 @@ const About = () => {
                 <div className="h-12 w-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mr-4 shadow-lg">
                   <Brain className="h-6 w-6 text-white" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold">🧠 SEO Is No Longer Just About Rankings — It's About Results</h2>
+                <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-500 to-amber-600 bg-clip-text text-transparent font-montserrat">SEO Is No Longer Just About Rankings — It's About Results</h2>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

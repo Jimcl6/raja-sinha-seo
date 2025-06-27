@@ -36,32 +36,21 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow relative">
-        {/* Background image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/lovable-uploads/22ac246d-b4ea-4ade-9e8c-11107bf02e8c.png')"
-          }}
-        ></div>
-        
-        {/* Dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        
-        <div className="relative z-10 py-16">
+      <main className="flex-grow">
+        <div className="py-16">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-8">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Get Your Free Website Review</span>
               </h1>
-              <p className="text-lg text-gray-200">
+              <p className="text-lg text-gray-600">
                 Fill out the form below and I'll provide you with a comprehensive 3-hour review of your website - completely free.
               </p>
             </div>
 
             {/* 3-Hour Review Benefits Section */}
             <div className="max-w-3xl mx-auto mb-12">
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-yellow-100">
+              <div className="bg-white p-8 rounded-2xl shadow-xl border border-yellow-100">
                 <div className="flex items-center justify-center mb-6">
                   <h3 className="text-2xl font-semibold text-gray-800">What you'll receive:</h3>
                   <div className="ml-4 relative">
@@ -89,99 +78,112 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    rules={{ required: "Name is required" }}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name *</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your full name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+            <div className="relative max-w-2xl mx-auto">
+              {/* Background image for form only */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center rounded-2xl"
+                style={{
+                  backgroundImage: "url('/lovable-uploads/22ac246d-b4ea-4ade-9e8c-11107bf02e8c.png')"
+                }}
+              ></div>
+              
+              {/* Dark overlay for text legibility */}
+              <div className="absolute inset-0 bg-black/60 rounded-2xl"></div>
+              
+              <div className="relative z-10 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      rules={{ required: "Name is required" }}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Your full name" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                  <FormField
-                    control={form.control}
-                    name="websiteUrl"
-                    rules={{ 
-                      required: "Website URL is required",
-                      pattern: {
-                        value: /^https?:\/\/.+/,
-                        message: "Please enter a valid URL (starting with http:// or https://)"
-                      }
-                    }}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Website URL *</FormLabel>
-                        <FormControl>
-                          <Input placeholder="https://yourwebsite.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                    <FormField
+                      control={form.control}
+                      name="websiteUrl"
+                      rules={{ 
+                        required: "Website URL is required",
+                        pattern: {
+                          value: /^https?:\/\/.+/,
+                          message: "Please enter a valid URL (starting with http:// or https://)"
+                        }
+                      }}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Website URL *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="https://yourwebsite.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                  <FormField
-                    control={form.control}
-                    name="businessBackground"
-                    rules={{ required: "Business background is required" }}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Brief Background About Your Business *</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Tell me about your business, industry, target audience, and current challenges..."
-                            className="min-h-[120px]"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                    <FormField
+                      control={form.control}
+                      name="businessBackground"
+                      rules={{ required: "Business background is required" }}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Brief Background About Your Business *</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Tell me about your business, industry, target audience, and current challenges..."
+                              className="min-h-[120px]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    rules={{ 
-                      required: "Phone number is required",
-                      pattern: {
-                        value: /^[\+]?[\d\s\-\(\)]{10,}$/,
-                        message: "Please enter a valid phone number"
-                      }
-                    }}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone Number *</FormLabel>
-                        <FormControl>
-                          <Input placeholder="+1 (555) 123-4567" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      rules={{ 
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^[\+]?[\d\s\-\(\)]{10,}$/,
+                          message: "Please enter a valid phone number"
+                        }
+                      }}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Phone Number *</FormLabel>
+                          <FormControl>
+                            <Input placeholder="+1 (555) 123-4567" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-white font-bold py-4"
-                  >
-                    Send My Request
-                  </Button>
-                </form>
-              </Form>
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-white font-bold py-4"
+                    >
+                      Send My Request
+                    </Button>
+                  </form>
+                </Form>
 
-              <div className="mt-6 text-center">
-                <p className="text-sm text-gray-500">
-                  * Required fields. Your information is secure and will only be used to provide your free website review.
-                </p>
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-gray-500">
+                    * Required fields. Your information is secure and will only be used to provide your free website review.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

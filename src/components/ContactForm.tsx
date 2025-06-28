@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -66,29 +65,29 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
 
       console.log("Form submission saved to database successfully");
 
-      // Send confirmation email to user
+      // Send confirmation and notification emails
       try {
         const { error: emailError } = await supabase.functions.invoke('send-contact-confirmation', {
           body: {
             name: values.name,
             email: values.email,
+            phone: values.phone,
+            message: values.message,
           },
         });
 
         if (emailError) {
-          console.error('Error sending confirmation email:', emailError);
+          console.error('Error sending emails:', emailError);
           // Don't fail the whole process if email fails
           toast.success("Message sent successfully! Note: confirmation email may be delayed.");
         } else {
-          console.log("Confirmation email sent successfully");
+          console.log("Emails sent successfully");
           toast.success("Message sent successfully! Check your email for confirmation.");
         }
       } catch (emailError) {
-        console.error('Error sending confirmation email:', emailError);
+        console.error('Error sending emails:', emailError);
         toast.success("Message sent successfully! Note: confirmation email may be delayed.");
       }
-
-      toast.success("Message sent successfully!");
 
       onSuccess();
       form.reset();

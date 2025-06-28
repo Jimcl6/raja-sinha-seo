@@ -13,6 +13,8 @@ const corsHeaders = {
 interface ContactConfirmationRequest {
   name: string;
   email: string;
+  phone?: string;
+  message?: string;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -22,11 +24,13 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email }: ContactConfirmationRequest = await req.json();
+    const { name, email, phone, message }: ContactConfirmationRequest = await req.json();
     
     console.log("Sending confirmation email to:", email);
+    console.log("Sending notification email to: raja@rajasinhaseo.com");
 
-    const emailResponse = await resend.emails.send({
+    // Send confirmation email to the person who submitted the form
+    const confirmationEmailResponse = await resend.emails.send({
       from: "Raja Sinha <noreply@rajasinhaseo.com>",
       to: [email],
       subject: "Thank you for your inquiry - Raja Sinha SEO",
@@ -68,9 +72,45 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Confirmation email sent successfully:", emailResponse);
+    console.log("Confirmation email sent successfully:", confirmationEmailResponse);
 
-    return new Response(JSON.stringify({ success: true, emailId: emailResponse.data?.id }), {
+    // Send notification email to Raja
+    const notificationEmailResponse = await resend.emails.send({
+      from: "Website Contact Form <noreply@rajasinhaseo.com>",
+      to: ["raja@rajasinhaseo.com"],
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h1 style="color: #1f2937; margin-bottom: 20px;">New Contact Form Submission</h1>
+          
+          <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <h2 style="color: #1f2937; margin-top: 0;">Contact Details:</h2>
+            <p style="margin: 10px 0;"><strong>Name:</strong> ${name}</p>
+            <p style="margin: 10px 0;"><strong>Email:</strong> ${email}</p>
+            ${phone ? `<p style="margin: 10px 0;"><strong>Phone:</strong> ${phone}</p>` : ''}
+          </div>
+          
+          ${message ? `
+          <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+            <h3 style="color: #1f2937; margin-top: 0;">Message:</h3>
+            <p style="color: #374151; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+          </div>
+          ` : ''}
+          
+          <p style="color: #6b7280; font-size: 14px; margin-top: 30px;">
+            This notification was sent from your website contact form.
+          </p>
+        </div>
+      `,
+    });
+
+    console.log("Notification email sent successfully:", notificationEmailResponse);
+
+    return new Response(JSON.stringify({ 
+      success: true, 
+      confirmationEmailId: confirmationEmailResponse.data?.id,
+      notificationEmailId: notificationEmailResponse.data?.id
+    }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +118,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
     });
   } catch (error: any) {
-    console.error("Error sending confirmation email:", error);
+    console.error("Error sending emails:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       {

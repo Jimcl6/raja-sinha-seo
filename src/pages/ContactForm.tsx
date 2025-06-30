@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
@@ -71,12 +70,12 @@ const ContactForm = () => {
 
       console.log("3-hour review request saved to database successfully");
 
-      // Send notification email to Raja
+      // Send notification email to Raja with the inquirer's details
       try {
         const { error: emailError } = await supabase.functions.invoke('send-contact-confirmation', {
           body: {
             name: values.name,
-            email: 'raja@rajasinhaseo.com',
+            email: values.email, // This is the inquirer's email for the notification content
             phone: values.phone,
             message: submissionMessage,
             isNotification: true,

@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
+import { z } from "zod";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -9,16 +11,23 @@ import { Check, FileText, Star } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ManualReviews from '@/components/ManualReviews';
+import { toast } from '@/components/ui/sonner';
+import { supabase } from '@/integrations/supabase/client';
 
-interface ContactFormData {
-  name: string;
-  websiteUrl: string;
-  businessBackground: string;
-  phone: string;
-}
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  websiteUrl: z.string().url("Please enter a valid URL"),
+  businessBackground: z.string().min(10, "Please provide at least 10 characters describing your business"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
-  const form = useForm<ContactFormData>({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
       websiteUrl: '',
@@ -27,10 +36,61 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log('Form submitted:', data);
-    // Handle form submission here
-    alert('Thank you! Your request has been submitted. We will get back to you soon.');
+  const onSubmit = async (values: FormValues) => {
+    console.log("3-hour review form submitted with values:", values);
+    setIsSubmitting(true);
+    
+    try {
+      // Save to Supabase - we'll store it in the same contact_submissions table with a note in the message
+      const submissionMessage = `3-Hour Website Review Request\n\nWebsite URL: ${values.websiteUrl}\n\nBusiness Background: ${values.businessBackground}`;
+      
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: values.name,
+          email: 'review-request@placeholder.com', // We'll use a placeholder since this form doesn't collect email
+          phone: values.phone,
+          message: submissionMessage,
+        });
+
+      if (error) {
+        console.error('Error saving to database:', error);
+        toast.error("There was an issue saving your request. Please try again.");
+        return;
+      }
+
+      console.log("3-hour review request saved to database successfully");
+
+      // Send notification email to Raja
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-contact-confirmation', {
+          body: {
+            name: values.name,
+            email: 'raja@rajasinhaseo.com', // Send notification to Raja only
+            phone: values.phone,
+            message: submissionMessage,
+          },
+        });
+
+        if (emailError) {
+          console.error('Error sending notification email:', emailError);
+          toast.success("Request submitted successfully! Note: notification email may be delayed.");
+        } else {
+          console.log("Notification email sent successfully");
+          toast.success("Request submitted successfully! I'll get back to you within 24 hours.");
+        }
+      } catch (emailError) {
+        console.error('Error sending notification email:', emailError);
+        toast.success("Request submitted successfully! Note: notification email may be delayed.");
+      }
+
+      form.reset();
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error("An unexpected error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -96,10 +156,9 @@ const ContactForm = () => {
                     <FormField
                       control={form.control}
                       name="name"
-                      rules={{ required: "Name is required" }}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Name *</FormLabel>
+                          <FormLabel>Name <span className="text-red-500">*</span></FormLabel>
                           <FormControl>
                             <Input placeholder="Your full name" {...field} />
                           </FormControl>
@@ -111,16 +170,9 @@ const ContactForm = () => {
                     <FormField
                       control={form.control}
                       name="websiteUrl"
-                      rules={{ 
-                        required: "Website URL is required",
-                        pattern: {
-                          value: /^https?:\/\/.+/,
-                          message: "Please enter a valid URL (starting with http:// or https://)"
-                        }
-                      }}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Website URL *</FormLabel>
+                          <FormLabel>Website URL <span className="text-red-500">*</span></FormLabel>
                           <FormControl>
                             <Input placeholder="https://yourwebsite.com" {...field} />
                           </FormControl>
@@ -132,10 +184,9 @@ const ContactForm = () => {
                     <FormField
                       control={form.control}
                       name="businessBackground"
-                      rules={{ required: "Business background is required" }}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Brief Background About Your Business *</FormLabel>
+                          <FormLabel>Brief Background About Your Business <span className="text-red-500">*</span></FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder="Tell me about your business, industry, target audience, and current challenges..."
@@ -151,16 +202,9 @@ const ContactForm = () => {
                     <FormField
                       control={form.control}
                       name="phone"
-                      rules={{ 
-                        required: "Phone number is required",
-                        pattern: {
-                          value: /^[\+]?[\d\s\-\(\)]{10,}$/,
-                          message: "Please enter a valid phone number"
-                        }
-                      }}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Phone Number *</FormLabel>
+                          <FormLabel>Phone Number <span className="text-red-500">*</span></FormLabel>
                           <FormControl>
                             <Input placeholder="+1 (555) 123-4567" {...field} />
                           </FormControl>
@@ -173,8 +217,9 @@ const ContactForm = () => {
                       type="submit" 
                       size="lg" 
                       className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-white font-bold py-4"
+                      disabled={isSubmitting}
                     >
-                      Send My Request
+                      {isSubmitting ? "Sending Request..." : "Send My Request"}
                     </Button>
                   </form>
                 </Form>

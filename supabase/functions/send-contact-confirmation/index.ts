@@ -32,7 +32,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending notification email to: raja@rajasinhaseo.com");
 
     if (isNotification) {
-      // Send notification email to Raja with BCC
+      // Send notification email to Raja with BCC - email parameter contains the inquirer's email for content
       const notificationEmailResponse = await resend.emails.send({
         from: "Website Contact Form <noreply@rajasinhaseo.com>",
         to: ["raja@rajasinhaseo.com"],

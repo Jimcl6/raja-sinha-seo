@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
@@ -13,9 +12,17 @@ import Footer from '@/components/Footer';
 import ManualReviews from '@/components/ManualReviews';
 import { toast } from '@/components/ui/sonner';
 import { supabase } from '@/integrations/supabase/client';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
   websiteUrl: z.string().url("Please enter a valid URL"),
   businessBackground: z.string().min(10, "Please provide at least 10 characters describing your business"),
   phone: z.string().min(10, "Please enter a valid phone number"),
@@ -25,11 +32,13 @@ type FormValues = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
+      email: '',
       websiteUrl: '',
       businessBackground: '',
       phone: '',
@@ -41,14 +50,14 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Save to Supabase - we'll store it in the same contact_submissions table with a note in the message
+      // Save to Supabase
       const submissionMessage = `3-Hour Website Review Request\n\nWebsite URL: ${values.websiteUrl}\n\nBusiness Background: ${values.businessBackground}`;
       
       const { error } = await supabase
         .from('contact_submissions')
         .insert({
           name: values.name,
-          email: 'review-request@placeholder.com', // We'll use a placeholder since this form doesn't collect email
+          email: values.email,
           phone: values.phone,
           message: submissionMessage,
         });
@@ -66,24 +75,47 @@ const ContactForm = () => {
         const { error: emailError } = await supabase.functions.invoke('send-contact-confirmation', {
           body: {
             name: values.name,
-            email: 'raja@rajasinhaseo.com', // Send notification to Raja only
+            email: 'raja@rajasinhaseo.com',
             phone: values.phone,
             message: submissionMessage,
+            isNotification: true,
           },
         });
 
         if (emailError) {
           console.error('Error sending notification email:', emailError);
-          toast.success("Request submitted successfully! Note: notification email may be delayed.");
         } else {
           console.log("Notification email sent successfully");
-          toast.success("Request submitted successfully! I'll get back to you within 24 hours.");
         }
       } catch (emailError) {
         console.error('Error sending notification email:', emailError);
-        toast.success("Request submitted successfully! Note: notification email may be delayed.");
       }
 
+      // Send confirmation email to the inquirer
+      try {
+        const confirmationMessage = `Thank you for submitting your website for a free 3-hour review!\n\nI've received your request and will get back to you within 24 hours with your comprehensive website analysis.\n\nYour submission details:\n- Website: ${values.websiteUrl}\n- Business Background: ${values.businessBackground}\n\nBest regards,\nRaja Sinha`;
+        
+        const { error: confirmationEmailError } = await supabase.functions.invoke('send-contact-confirmation', {
+          body: {
+            name: values.name,
+            email: values.email,
+            phone: values.phone,
+            message: confirmationMessage,
+            isConfirmation: true,
+          },
+        });
+
+        if (confirmationEmailError) {
+          console.error('Error sending confirmation email:', confirmationEmailError);
+        } else {
+          console.log("Confirmation email sent successfully");
+        }
+      } catch (confirmationEmailError) {
+        console.error('Error sending confirmation email:', confirmationEmailError);
+      }
+
+      // Show success dialog
+      setShowSuccessDialog(true);
       form.reset();
     } catch (error) {
       console.error('Unexpected error:', error);
@@ -169,6 +201,20 @@ const ContactForm = () => {
 
                     <FormField
                       control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email <span className="text-red-500">*</span></FormLabel>
+                          <FormControl>
+                            <Input placeholder="your@email.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
                       name="websiteUrl"
                       render={({ field }) => (
                         <FormItem>
@@ -236,6 +282,31 @@ const ContactForm = () => {
         <ManualReviews />
       </main>
       <Footer />
+
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Check className="h-5 w-5 text-green-500" />
+              Request Submitted Successfully!
+            </DialogTitle>
+            <DialogDescription className="text-left space-y-2">
+              <p>Thank you for submitting your website for a free 3-hour review!</p>
+              <p>I've received your request and will get back to you within <strong>24 hours</strong> with your comprehensive website analysis.</p>
+              <p>A confirmation email has been sent to your email address with all the details.</p>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex justify-center">
+            <Button 
+              onClick={() => setShowSuccessDialog(false)}
+              className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600"
+            >
+              Got it, thanks!
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

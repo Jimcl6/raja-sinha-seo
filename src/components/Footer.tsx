@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Facebook, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,6 +15,12 @@ const Footer = () => {
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-10 w-auto"
               />
+            </Link>
+            <Link 
+              to="/" 
+              className="inline-block mb-4 text-yellow-400 hover:text-yellow-300 transition-colors font-medium"
+            >
+              SEO Consultant Philippines
             </Link>
             <div className="text-gray-400 mb-4">
               <p className="mb-2">2nd Floor, Dela Costa St, Block 1 Lot 1, Phase 5, corner Madrid St, Bacoor, 4102 Cavite</p>

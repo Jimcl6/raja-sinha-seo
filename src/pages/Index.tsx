@@ -8,6 +8,7 @@ import ThreeHourService from '@/components/ThreeHourService';
 import WhyMe from '@/components/WhyMe';
 import ContactCTA from '@/components/ContactCTA';
 import ManualReviews from '@/components/ManualReviews';
+import SEOBusinessSection from '@/components/SEOBusinessSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
         <WhyMe />
         <ContactCTA />
         <ManualReviews />
+        <SEOBusinessSection />
       </main>
       <Footer />
     </div>

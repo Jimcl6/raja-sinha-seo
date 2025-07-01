@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
 import { z } from "zod";
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -33,6 +34,7 @@ type FormValues = z.infer<typeof formSchema>;
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const navigate = useNavigate();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -123,6 +125,11 @@ const ContactForm = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleSuccessDialogClose = () => {
+    setShowSuccessDialog(false);
+    navigate('/');
   };
 
   return (
@@ -299,7 +306,7 @@ const ContactForm = () => {
           </DialogHeader>
           <div className="flex justify-center">
             <Button 
-              onClick={() => setShowSuccessDialog(false)}
+              onClick={handleSuccessDialogClose}
               className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600"
             >
               Got it, thanks!

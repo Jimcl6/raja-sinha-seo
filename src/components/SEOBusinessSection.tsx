@@ -42,11 +42,9 @@ const SEOBusinessSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            <span className="gradient-text">SEO That Works for Business Owners</span>
-            <br />
-            <span className="text-gray-700">— Not Just Search Engines</span>
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            SEO Consultant Philippines
+          </h1>
         </div>
 
         {/* Introduction */}
@@ -71,95 +69,117 @@ const SEOBusinessSection = () => {
           </Card>
         </div>
 
-        {/* What I Actually Do */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            What I Actually Do for Your Business
-          </h3>
-          <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Most people think SEO is just ranking on Google. That's a small part of it. What I do is give your business a clear presence in front of people who are ready to act.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow border-yellow-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-yellow-100 p-3 rounded-full mr-4">
-                      <feature.icon className="h-6 w-6 text-yellow-600" />
+        {/* What I Actually Do - with background image */}
+        <div 
+          className="mb-16 relative bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3882&q=80')`
+          }}
+        >
+          <div className="p-12 text-white">
+            <h3 className="text-3xl font-bold text-center mb-4">
+              What I Actually Do for Your Business
+            </h3>
+            <p className="text-xl text-center mb-12 max-w-3xl mx-auto text-gray-200">
+              Most people think SEO is just ranking on Google. That's a small part of it. What I do is give your business a clear presence in front of people who are ready to act.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <Card key={index} className="bg-white/10 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow border-white/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="bg-yellow-400/20 p-3 rounded-full mr-4">
+                        <feature.icon className="h-6 w-6 text-yellow-300" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-white">{feature.title}</h4>
                     </div>
-                    <h4 className="text-lg font-semibold text-gray-900">{feature.title}</h4>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                    <p className="text-gray-200 leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* SEO and CRO Section */}
-        <div className="mb-16">
-          <Card className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mb-6 text-center">
-                SEO and CRO Are Not Separate Things
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <p className="text-lg mb-4 text-yellow-50">
-                    SEO brings people to your site. But if your site doesn't convince them to act, it's wasted effort.
+        {/* Combined SEO and CRO Section with Bigger Picture - with background image */}
+        <div 
+          className="relative bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=4076&q=80')`
+          }}
+        >
+          <div className="p-12 text-white">
+            <h3 className="text-3xl font-bold mb-8 text-center text-yellow-400">
+              SEO and CRO Are Not Separate Things
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
+              <div>
+                <p className="text-lg mb-4 text-gray-200">
+                  SEO brings people to your site. But if your site doesn't convince them to act, it's wasted effort.
+                </p>
+                <p className="text-lg text-gray-200 mb-4">
+                  That's why I also look at:
+                </p>
+                <ul className="space-y-2 text-gray-200">
+                  <li>• Why visitors don't contact you</li>
+                  <li>• What elements confuse or distract them</li>
+                  <li>• How we can simplify and increase conversions</li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <p className="text-2xl font-bold text-white">
+                    It's not about chasing rankings.
                   </p>
-                  <p className="text-lg text-yellow-50">
-                    That's why I also look at:
+                  <p className="text-xl text-yellow-300 mt-2">
+                    It's about getting people to take action once they find you.
                   </p>
-                  <ul className="mt-4 space-y-2 text-yellow-50">
-                    <li>• Why visitors don't contact you</li>
-                    <li>• What elements confuse or distract them</li>
-                    <li>• How we can simplify and increase conversions</li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
-                    <p className="text-2xl font-bold text-white">
-                      It's not about chasing rankings.
-                    </p>
-                    <p className="text-xl text-yellow-100 mt-2">
-                      It's about getting people to take action once they find you.
-                    </p>
-                  </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
 
-        {/* Bigger Picture Section */}
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-gray-900 text-white shadow-xl">
-            <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mb-6 text-center text-yellow-400">
+            <div className="border-t border-white/20 pt-12">
+              <h3 className="text-3xl font-bold mb-8 text-center text-yellow-400">
                 Why You Need Help Seeing the Bigger Picture
               </h3>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed text-center max-w-4xl mx-auto">
                 SEO is no longer about gaming the algorithm. It's a combination of:
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                {['Technology', 'Strategy', 'Customer behavior', 'Content', 'User experience'].map((item, index) => (
-                  <div key={index} className="bg-yellow-500/20 p-3 rounded-lg text-center">
-                    <span className="text-yellow-400 font-semibold">{item}</span>
-                  </div>
-                ))}
+              <div className="max-w-2xl mx-auto mb-8">
+                <ul className="text-lg text-gray-200 space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-4"></span>
+                    Technology
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-4"></span>
+                    Strategy
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-4"></span>
+                    Customer behavior
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-4"></span>
+                    Content
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-4"></span>
+                    User experience
+                  </li>
+                </ul>
               </div>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed text-center max-w-4xl mx-auto">
                 And it's constantly evolving. If you're trying to do it all yourself—or relying on cookie-cutter marketing—you're missing the larger picture.
               </p>
-              <div className="bg-yellow-500/10 p-6 rounded-lg border border-yellow-500/30">
-                <p className="text-xl font-semibold text-yellow-400 text-center">
+              <div className="bg-yellow-400/10 p-8 rounded-lg border border-yellow-400/30 text-center">
+                <p className="text-xl font-semibold text-yellow-400">
                   I work as your strategic partner, helping you use SEO the right way—not just for clicks, but for real business results.
                 </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>

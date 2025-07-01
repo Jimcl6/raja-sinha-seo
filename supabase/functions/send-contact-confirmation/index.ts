@@ -82,7 +82,7 @@ const handler = async (req: Request): Promise<Response> => {
       const confirmationEmailResponse = await resend.emails.send({
         from: " Raja Sinha SEO <noreply@rajasinhaseo.com>",
         to: [email],
-        subject: ` ${name}, I received your Message.`,
+        subject: `${name}, I received your Message.`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h1 style="color: #1f2937; margin-bottom: 20px;">Thank you for reaching out!</h1>

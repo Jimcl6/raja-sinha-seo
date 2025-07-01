@@ -289,7 +289,7 @@ const ContactForm = () => {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Check className="h-5 w-5 text-green-500" />
-              Request Submitted Successfully!
+              I received your Review Request!
             </DialogTitle>
             <DialogDescription className="text-left space-y-2">
               <p>Thank you for submitting your website for a free 3-hour review!</p>

@@ -2,12 +2,20 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 interface ContactSuccessMessageProps {
   onReset: () => void;
 }
 
 const ContactSuccessMessage = ({ onReset }: ContactSuccessMessageProps) => {
+  const navigate = useNavigate();
+
+  const handleReturnHome = () => {
+    onReset(); // Keep existing functionality for parent component
+    navigate('/'); // Navigate to homepage
+  };
+
   return (
     <div className="text-center py-12">
       <CheckCircle className="mx-auto h-16 w-16 text-green-500 mb-6" />
@@ -16,7 +24,7 @@ const ContactSuccessMessage = ({ onReset }: ContactSuccessMessageProps) => {
         Thank you for reaching out. I'll get back to you as soon as possible.
       </p>
       <Button 
-        onClick={onReset}
+        onClick={handleReturnHome}
         className="bg-yellow-500 hover:bg-yellow-600 text-black"
       >
         Return to Homepage

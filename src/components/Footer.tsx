@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Instagram, Facebook, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,12 +16,6 @@ const Footer = () => {
                 alt="Raja Sinha SEO Consultancy" 
                 className="h-10 w-auto"
               />
-            </Link>
-            <Link 
-              to="/" 
-              className="inline-block mb-4 text-yellow-400 hover:text-yellow-300 transition-colors font-medium"
-            >
-              SEO Consultant Philippines
             </Link>
             <div className="text-gray-400 mb-4">
               <p className="mb-2">2nd Floor, Dela Costa St, Block 1 Lot 1, Phase 5, corner Madrid St, Bacoor, 4102 Cavite</p>
@@ -50,6 +45,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
+                  <ChevronRight className="h-4 w-4 mr-2" />
+                  <span>SEO Consultant Philippines</span>
+                </Link>
+              </li>
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-yellow-400 transition-colors flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />

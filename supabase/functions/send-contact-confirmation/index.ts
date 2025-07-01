@@ -186,7 +186,7 @@ const handler = async (req: Request): Promise<Response> => {
       from: "Website Contact Form <noreply@rajasinhaseo.com>",
       to: ["raja@rajasinhaseo.com"],
       bcc: ["jedllorente.redkite@gmail.com"],
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `Inquiry - Contact Page`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h1 style="color: #1f2937; margin-bottom: 20px;">New Contact Form Submission</h1>

@@ -3,16 +3,12 @@ import React from 'react';
 import { generateSitemap } from '@/utils/sitemap';
 
 const Sitemap = () => {
-  // Set the content type to XML when this component mounts
   React.useEffect(() => {
-    // Set the content type header for XML
-    document.contentType = 'application/xml';
-    
-    // Get the sitemap content and replace the page content
+    // Get the sitemap content
     const sitemapContent = generateSitemap();
     
     // Replace the entire document with XML content
-    document.open();
+    document.open('text/xml', 'replace');
     document.write(sitemapContent);
     document.close();
   }, []);

@@ -9,6 +9,8 @@ import ContactInfo from '@/components/ContactInfo';
 import ContactImage from '@/components/ContactImage';
 import ContactSuccessMessage from '@/components/ContactSuccessMessage';
 import ManualReviews from '@/components/ManualReviews';
+import SEOHelmet from '@/components/SEOHelmet';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -24,6 +26,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHelmet 
+        title="Contact Raja Sinha | SEO Consultant Philippines - Get Free Consultation"
+        description="Contact Raja Sinha for professional SEO consultation. Get expert advice on improving your website's search rankings and online visibility."
+        keywords="contact SEO consultant, Philippines SEO expert, free SEO consultation, website audit request"
+        canonicalUrl="https://rajasinhaseo.com/contact"
+      />
+      <SchemaMarkup type="contact" />
+      
       <Header />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-16">

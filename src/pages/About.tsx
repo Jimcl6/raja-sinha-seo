@@ -5,10 +5,20 @@ import { Separator } from '@/components/ui/separator';
 import { Book, Brain, ArrowRight, User, BookText, Sparkles, Target, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import SEOHelmet from '@/components/SEOHelmet';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHelmet 
+        title="About Raja Sinha | SEO Consultant Philippines - Background & Experience"
+        description="Learn about Raja Sinha's journey from language lover to SEO expert. 100+ clients helped with proven SEO strategies and results-focused approach."
+        keywords="Raja Sinha biography, SEO consultant background, Philippines SEO expert, digital marketing experience"
+        canonicalUrl="https://rajasinhaseo.com/about"
+      />
+      <SchemaMarkup type="person" />
+      
       <Header />
       <main className="flex-grow">
         {/* Introduction Section */}

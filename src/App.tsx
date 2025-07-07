@@ -13,6 +13,7 @@ import About from "./pages/About";
 import SeeMyWork from "./pages/SeeMyWork";
 import Contact from "./pages/Contact";
 import ContactForm from "./pages/ContactForm";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/work" element={<SeeMyWork />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/3-hour-review" element={<ContactForm />} />
+            <Route path="/sitemap.xml" element={<Sitemap />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

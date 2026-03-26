@@ -7,7 +7,7 @@ const ContactImage = () => {
       <img 
         src="/lovable-uploads/raja-sinha-contact.jpg" 
         alt="Raja Sinha SEO Consultancy" 
-        className="w-full h-full object-cover object-[center_20%]"
+        className="w-full h-full object-[center_20%] object-contain"
       />
     </div>
   );

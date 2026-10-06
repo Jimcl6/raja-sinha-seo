@@ -21,10 +21,36 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
+const DOMAIN_REGEX = /^(https?:\/\/)?([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/i;
+
+const normalizeWebsiteUrl = (url: string): string => {
+  const trimmed = url.trim();
+  if (!trimmed) return trimmed;
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+  return `https://${trimmed}`;
+};
+
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  websiteUrl: z.string().url("Please enter a valid URL"),
+  websiteUrl: z
+    .string()
+    .trim()
+    .refine((val) => DOMAIN_REGEX.test(val), {
+      message: "Please enter a valid website address (e.g. yourwebsite.com)",
+    })
+    .refine((val) => {
+      try {
+        new URL(normalizeWebsiteUrl(val));
+        return true;
+      } catch {
+        return false;
+      }
+    }, {
+      message: "Please enter a valid website address (e.g. yourwebsite.com)",
+    }),
   businessBackground: z.string().min(10, "Please provide at least 10 characters describing your business"),
   phone: z.string().min(10, "Please enter a valid phone number"),
 });
@@ -34,6 +60,7 @@ type FormValues = z.infer<typeof formSchema>;
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const [confirmationEmailSent, setConfirmationEmailSent] = useState(false);
   const navigate = useNavigate();
 
   const form = useForm<FormValues>({
@@ -48,12 +75,17 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (values: FormValues) => {
-    console.log("3-hour review form submitted with values:", values);
+    const normalizedWebsiteUrl = normalizeWebsiteUrl(values.websiteUrl);
+    console.log("3-hour review form submitted with values:", {
+      ...values,
+      websiteUrl: normalizedWebsiteUrl,
+    });
     setIsSubmitting(true);
+    setConfirmationEmailSent(false);
     
     try {
       // Save to Supabase
-      const submissionMessage = `3-Hour Website Review Request\n\nWebsite URL: ${values.websiteUrl}\n\nBusiness Background: ${values.businessBackground}`;
+      const submissionMessage = `3-Hour Website Review Request\n\nWebsite URL: ${normalizedWebsiteUrl}\n\nBusiness Background: ${values.businessBackground}`;
       
       const { error } = await supabase
         .from('contact_submissions')
@@ -95,7 +127,7 @@ const ContactForm = () => {
 
       // Send confirmation email to the inquirer
       try {
-        const confirmationMessage = `Thank you for submitting your website for a free 3-hour review!\n\nI've received your request and will get back to you within 24 hours with your comprehensive website analysis.\n\nYour submission details:\n- Website: ${values.websiteUrl}\n- Business Background: ${values.businessBackground}\n\nBest regards,\nRaja Sinha`;
+        const confirmationMessage = `Thank you for submitting your website for a free 3-hour review!\n\nI've received your request and will get back to you within 24 hours with your comprehensive website analysis.\n\nYour submission details:\n- Website: ${normalizedWebsiteUrl}\n- Business Background: ${values.businessBackground}\n\nBest regards,\nRaja Sinha`;
         
         const { error: confirmationEmailError } = await supabase.functions.invoke('send-contact-confirmation', {
           body: {
@@ -111,6 +143,7 @@ const ContactForm = () => {
           console.error('Error sending confirmation email:', confirmationEmailError);
         } else {
           console.log("Confirmation email sent successfully");
+          setConfirmationEmailSent(true);
         }
       } catch (confirmationEmailError) {
         console.error('Error sending confirmation email:', confirmationEmailError);
@@ -227,7 +260,7 @@ const ContactForm = () => {
                         <FormItem>
                           <FormLabel>Website URL <span className="text-red-500">*</span></FormLabel>
                           <FormControl>
-                            <Input placeholder="https://yourwebsite.com" {...field} />
+                            <Input placeholder="yourwebsite.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -301,7 +334,11 @@ const ContactForm = () => {
             <DialogDescription className="text-left space-y-2">
               <p>Thank you for submitting your website for a free 3-hour review!</p>
               <p>I've received your request and will get back to you within <strong>24 hours</strong> with your comprehensive website analysis.</p>
-              <p>A confirmation email has been sent to your email address with all the details.</p>
+              {confirmationEmailSent ? (
+                <p>A confirmation email has been sent to your email address with all the details.</p>
+              ) : (
+                <p>Your request was saved, but the confirmation email could not be sent right away. I'll still review your submission and follow up directly.</p>
+              )}
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-center">

@@ -10,6 +10,21 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+type ResendEmailResponse = Awaited<ReturnType<typeof resend.emails.send>>;
+
+const sendEmail = async (
+  payload: Parameters<typeof resend.emails.send>[0],
+): Promise<string | undefined> => {
+  const response: ResendEmailResponse = await resend.emails.send(payload);
+
+  if (response.error) {
+    console.error("Resend rejected email:", response.error);
+    throw new Error(response.error.message || "Resend rejected the email request.");
+  }
+
+  return response.data?.id;
+};
+
 interface ContactConfirmationRequest {
   name: string;
   email: string;
@@ -33,7 +48,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (isNotification) {
       // Send notification email to Raja with BCC - email parameter contains the inquirer's email for content
-      const notificationEmailResponse = await resend.emails.send({
+      const notificationEmailId = await sendEmail({
         from: "Website Contact Form <noreply@rajasinhaseo.com>",
         to: ["raja@rajasinhaseo.com"],
         bcc: ["jedllorente.redkite@gmail.com"],
@@ -63,11 +78,11 @@ const handler = async (req: Request): Promise<Response> => {
         `,
       });
 
-      console.log("Notification email sent successfully:", notificationEmailResponse);
+      console.log("Notification email sent successfully:", notificationEmailId);
 
       return new Response(JSON.stringify({ 
         success: true, 
-        notificationEmailId: notificationEmailResponse.data?.id
+        notificationEmailId
       }), {
         status: 200,
         headers: {
@@ -79,7 +94,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (isConfirmation) {
       // Send confirmation email to the person who submitted the form
-      const confirmationEmailResponse = await resend.emails.send({
+      const confirmationEmailId = await sendEmail({
         from: " Raja Sinha SEO <noreply@rajasinhaseo.com>",
         to: [email],
         subject: `${name}, I received your Message.`,
@@ -121,11 +136,11 @@ const handler = async (req: Request): Promise<Response> => {
         `,
       });
 
-      console.log("Confirmation email sent successfully:", confirmationEmailResponse);
+      console.log("Confirmation email sent successfully:", confirmationEmailId);
 
       return new Response(JSON.stringify({ 
         success: true, 
-        confirmationEmailId: confirmationEmailResponse.data?.id
+        confirmationEmailId
       }), {
         status: 200,
         headers: {
@@ -137,7 +152,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Legacy support - send both emails (original behavior)
     // Send confirmation email to the person who submitted the form
-    const confirmationEmailResponse = await resend.emails.send({
+    const confirmationEmailId = await sendEmail({
       from: "Raja Sinha SEO<noreply@rajasinhaseo.com>",
       to: [email],
       subject: `${name}, I received your Message.`,
@@ -179,10 +194,10 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Confirmation email sent successfully:", confirmationEmailResponse);
+    console.log("Confirmation email sent successfully:", confirmationEmailId);
 
     // Send notification email to Raja with BCC
-    const notificationEmailResponse = await resend.emails.send({
+    const notificationEmailId = await sendEmail({
       from: "Website Contact Form <noreply@rajasinhaseo.com>",
       to: ["raja@rajasinhaseo.com"],
       bcc: ["jedllorente.redkite@gmail.com"],
@@ -212,12 +227,12 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Notification email sent successfully:", notificationEmailResponse);
+    console.log("Notification email sent successfully:", notificationEmailId);
 
     return new Response(JSON.stringify({ 
       success: true, 
-      confirmationEmailId: confirmationEmailResponse.data?.id,
-      notificationEmailId: notificationEmailResponse.data?.id
+      confirmationEmailId,
+      notificationEmailId
     }), {
       status: 200,
       headers: {
